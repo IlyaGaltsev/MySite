@@ -1,6 +1,6 @@
 import { MdEmail, } from "react-icons/md";
 import {ImGithub} from "react-icons/im";
-import {IoLogoVk, IoLogoWhatsapp, IoLogoLinkedin} from "react-icons/io";
+import {IoLogoVk, IoLogoWhatsapp} from "react-icons/io";
 const contacts = [
     {
         id:1,
