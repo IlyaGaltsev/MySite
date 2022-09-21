@@ -1,0 +1,11 @@
+.skillCard{
+    display: flex;
+    align-items: center;
+}
+.skillCard img{
+    margin-right: 18px;
+    max-width: 40px;
+}
+@media(max-width:559px){
+    .skillCard{}
+}
