@@ -5,7 +5,7 @@ html[data-theme="light"]{
     --outline-color:#ACACAC;
 }
 html[data-theme="dark"]{
-    --text-color:rgb(255, 255, 255);
+    --text-color:rgb(214, 214, 214);
     --bg-color:black;
     --primary-color:#4C5497;
     --outline-color:#3d3d3d;

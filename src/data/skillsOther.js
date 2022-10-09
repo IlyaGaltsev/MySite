@@ -9,19 +9,19 @@ const skillsOther = [
     },
     {
         id:3,
-        name:'JS'
+        name:'JavaScript'
     },
     {
         id:4,
-        name:'React.js'
+        name:'React/React-Native'
+    },
+    {
+        id:6,
+        name:'TypeScript'
     },
     {
         id:5,
         name:'Firebase'
-    },
-    {
-        id:6,
-        name:'Figma'
     },
     {
         id:7,
@@ -50,6 +50,18 @@ const skillsOther = [
     {
         id:13,
         name:'react-moment'
+    },
+    {
+        id:14,
+        name:'Next'
+    },
+    {
+        id:15,
+        name:'SCSS/SASS'
+    },
+    {
+        id:16,
+        name:'Figma'
     }
 ]
 export default skillsOther;

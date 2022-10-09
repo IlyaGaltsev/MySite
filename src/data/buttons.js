@@ -3,7 +3,7 @@ import {IoCloudUploadSharp} from "react-icons/io5"
 const buttons = [
     {
         id:1,
-        name:'скачать CV',
+        name:'скачать резюме',
         link:'https://docs.google.com/document/d/14zpcbqmRUiqriTOoHmnMWif-aS1oAGILIuM0UxyEJFE/edit?usp=sharing',
         icon: ()=>{return <IoCloudUploadSharp style={{marginLeft:10}} size={18}/>}
     },
