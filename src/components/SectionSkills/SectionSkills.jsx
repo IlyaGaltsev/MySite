@@ -16,24 +16,10 @@ function SectionSkills() {
       </p>
       {/* Мне нравится работать над различными технологиями, включая веб-разработку и разработку мобильных приложений. Моя цель - создавать приложения, которые решают реальные проблемы и облегчают жизнь пользователям. */}
       <div className="section-skill__wrapperframe">
-      {/* <div className="section-skill__skills">
-        <p className='skills__title'>Более года</p>
-        <div className='skills__wrapper'>
-        {skillsYear.map(skill => <SkillCard id={skill.id} skill={skill}/>)}
-        </div>
-      </div>
-
-      <div className="section-skill__skills">
-        <p className='skills__title'>Более 7 месяцев</p>
-        <div className='skills__wrapper'>
-        {skillsMonth.map(skill => <SkillCard id={skill.id} skill={skill}/>)}
-        </div>
-      </div> */}
-      
       <div className="section-skill__skills skills-other">
         <p className='skills__title'>Я владею:</p>
         <div className='skills-other__wrapper'>
-          {skillsDop.map(skill => <SkillOtherCard id={skill.id} name={skill.name}/>)}
+          {skillsDop.map(skill => <SkillOtherCard key={skill.id} name={skill.name}/>)}
         </div>
       </div>
       </div>

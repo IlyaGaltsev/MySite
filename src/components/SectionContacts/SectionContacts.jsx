@@ -19,7 +19,7 @@ function SectionContacts() {
         <PrimaryButton button={buttons[1]}/>
       </div>
       <div className="section-contacts__contacts">
-        {contacts.map(contact => <a className='color-link' id={contact.id} href={contact.link}>
+        {contacts.map(contact => <a className='color-link' key={contact.id} href={contact.link}>
           {contact.icon()}
         </a>)}
       </div>

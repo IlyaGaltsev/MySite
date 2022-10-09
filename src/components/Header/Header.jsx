@@ -50,7 +50,7 @@ function Header() {
     <header className='header'>
       <div className="header__wrapper">
         <div className="buttons__wrapper">
-            {links.map(link => <Link id={link.id} link={link}/>)}
+            {links.map(link => <Link key={link.id} link={link}/>)}
         </div>
         <div className="header__burger">
           {

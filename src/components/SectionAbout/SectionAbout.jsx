@@ -7,9 +7,9 @@ function SectionAbout() {
     <div className="section-about__wrapper" id='about'>
       <div className="section-about__title">
         <h1>
-        Привет я <span className='primary-color'>Илья</span>
+        Привет! Я <span className='primary-color'>Илья</span>
         </h1>
-        <img class='title__icon' src={handle} alt='k'/>
+        <img className='title__icon' src={handle} alt='k'/>
       </div>
       <h1>Я Frontend разработчик</h1>
       <p className='section-about__text'>Специализируюсь на веб- и мобильной разработке с акцентом на разработку интерфейса. Заинтересован в создании чего-то потрясающего с помощью кода. Не так давно возникло желание делать более купные проекты, тем самым развиваться в разработке приложений и помогать людям, делая их жизнь чуть проще</p>

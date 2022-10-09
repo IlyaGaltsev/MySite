@@ -5,17 +5,17 @@ const links = [
         path:'#about'
     },
     {
-        id:1,
+        id:2,
         name:'Навыки',
         path:'#skills'
     },
     {
-        id:1,
+        id:3,
         name:'Проекты',
         path:'#projects'
     },
     {
-        id:1,
+        id:4,
         name:'Контакты',
         path:'#contacts'
     }

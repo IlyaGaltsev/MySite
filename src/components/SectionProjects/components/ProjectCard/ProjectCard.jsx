@@ -9,7 +9,7 @@ function ProjectCard({project}) {
        <h3 className='project_card__title'>{name}</h3>
        <p className='project_card__description text_16px'>{description}</p>
        <div className="project_card__technologies">
-        {technologies.map(techno => <p className='text_16px' id={techno.id}>{techno.name}</p>)}
+        {technologies.map(techno => <p className='text_16px' key={techno.id}>{techno.name}</p>)}
        </div>
        <div className="project_card__links">
         {(link!=='/')
