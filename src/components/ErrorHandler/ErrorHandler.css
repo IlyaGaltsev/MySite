@@ -1,0 +1,11 @@
+.error-handler {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  color: red;
+}
+
+.error-handler > span {
+  margin-left: 8px;
+  font-weight: 400;
+}

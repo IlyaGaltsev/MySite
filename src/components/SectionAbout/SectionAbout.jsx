@@ -1,24 +1,34 @@
-import './SectionAbout.css';
-import handle from '../../assets/icons/handle.png'
-import PrimaryButton from '../PrimaryButton/PrimaryButton';
-import buttons from '../../data/buttons';
+import React from 'react'
+
+import figure from '../../assets/images/background__figure.svg'
+import './SectionAbout.css'
+import SmoothMoveBlock from './SmoothMoveBlock'
 
 function SectionAbout() {
   return (
-    <div className="section-about__wrapper" id='about'>
-      <div className="section-about__title">
-        <h1>
-        Привет, я <span className='primary-color'>Илья</span>
-        </h1>
-        <img className='title__icon' src={handle} alt='k'/>
+    <div className="section-about__wrapper">
+      <h1>
+        В поиске <span>web</span> разработчика?
+      </h1>
+      <p>
+        Специализируюсь на разработке интерфейсов. Люблю пробовать новое в программировании. Студент
+        3 курса Тамбовского Государственного Университета им. Г. Р. Державина, имею опыт продуктовой
+        разработки
+      </p>
+      <div className="section-about__buttons">
+        <button className="primary-button">Написать мне</button>
+        <button className="secoundary-button">Резюме</button>
       </div>
-      <h1>Я Frontend разработчик</h1>
-      <p className='section-about__text'>Специализируюсь на мобильной и веб-разработке с акцентом на разработку интерфейса. Заинтересован в создании чего-то потрясающего с помощью кода. Не так давно возникло желание делать более купные проекты, тем самым развиваться в разработке приложений и помогать людям, делая их жизнь чуть проще</p>
-      <div className="section-about__button">
-        <PrimaryButton button={buttons[0]} />
-      </div>
+
+      <SmoothMoveBlock />
+
+      <img
+        className="section-about__background"
+        src={figure}
+        alt="background__figure"
+      />
     </div>
-  );
+  )
 }
 
-export default SectionAbout;
+export { SectionAbout }

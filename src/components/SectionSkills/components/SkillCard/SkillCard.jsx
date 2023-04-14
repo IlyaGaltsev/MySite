@@ -1,11 +1,11 @@
-import './SkillCard.css';
+import "./SkillCard.css";
 
-function SkillCard({skill}) {
+function SkillCard({ icon, name }) {
   return (
-    <div className="skillCard">
-    <img src={skill.image} alt="i" />
-    <p className='w600'>{skill.name}</p>
-  </div>
+    <div className="skills__card">
+      <img src={icon} alt="card_image" />
+      <p>{name}</p>
+    </div>
   );
 }
 
