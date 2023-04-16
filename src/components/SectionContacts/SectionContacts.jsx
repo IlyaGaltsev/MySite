@@ -1,12 +1,13 @@
 import backgroundfigure from '../../assets/images/background__figure_light.svg'
 import avatar from '../../assets/images/contacts-avatar.png'
 import telegram from '../../assets/icons/telegram.svg'
-import { axiosClient } from '../../axiosClient'
 import { useForm } from 'react-hook-form'
 import { TextFiled } from '../TextFiled'
 import './SectionContacts.css'
+import axios from 'axios'
+import { ErrorHandler } from '../ErrorHandler'
 
-const SectionContacts = () => {
+const SectionContacts = ({ handleOpenModal }) => {
   const {
     register,
     formState: { errors },
@@ -14,10 +15,11 @@ const SectionContacts = () => {
   } = useForm()
 
   const submit = data => {
-    axiosClient
-      .post('/submit-form', data)
-      .then(data => console.log('success'))
-      .catch(error => console.log(error.response))
+    console.log(data)
+    // axios
+    //   .post('https://mysite-backend.onrender.com/api/submit-form', data)
+    //   .then(data => console.log('success'))
+    //   .catch(error => console.log(error.response))
   }
 
   return (
@@ -71,18 +73,34 @@ const SectionContacts = () => {
               message: 'Обязательное поле'
             },
             maxLength: {
-              value: 240,
+              value: 1240,
               message: 'Превышена максимальная длинна'
             }
           }}
         />
-        <input
-          type="checkbox"
-          id="vehicle1"
-          name="vehicle1"
-          value="Bike"
-        />
-        <label for="vehicle1">Я соглашаюсь с политикой конфенденциальности</label>
+        <div style={{marginBottom: 16}}>
+        <label>
+          <input
+            type="checkbox"
+            {...register('termsOfUse', {
+              required: {
+                value: true,
+                message: 'Необходимо ваше соглашение'
+              },
+            })}
+          />
+          Я соглашаюсь с 
+          <span
+            className="link"
+            onClick={handleOpenModal}
+          >
+            политикой конфенденциальности
+          </span>
+
+        </label>
+        {errors.termsOfUse && <ErrorHandler message={errors.termsOfUse.message} />}
+
+        </div>
         <button className="primary-button">Отправить</button>
       </form>
       <img

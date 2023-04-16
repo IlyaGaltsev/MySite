@@ -1,24 +1,20 @@
-import { SectionAbout } from "../components/SectionAbout";
-import "./App.css";
-import Header from "../components/Header/Header";
-import {SectionProjects} from "../components/SectionProjects";
-import {SectionSkills} from "../components/SectionSkills";
-import "../publicStyles.css";
-import { SectionContacts } from "../components/SectionContacts";
+import { Route, Routes,  } from 'react-router-dom'
+import { publicRoutes } from '../router'
+import '../publicStyles.css'
+import './App.css'
 
 function App() {
- 
   return (
-    <div className="app__wrapper">
-      <Header />
-      <div className="app__sections">
-        <SectionAbout />
-        <SectionSkills />
-        <SectionProjects />
-        <SectionContacts/>
-      </div>
-    </div>
-  );
+    <Routes>
+      {publicRoutes.map(({ path, Component }) => (
+        <Route
+          key={path}
+          path={path}
+          element={Component}
+        />
+      ))}
+    </Routes>
+  )
 }
 
-export { App };
+export { App }

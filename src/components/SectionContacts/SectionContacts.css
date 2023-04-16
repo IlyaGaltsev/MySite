@@ -2,6 +2,15 @@
   display: flex;
   position: relative;
   align-items: flex-start;
+  /* align-items: flex-start;
+  justify-content: center;
+  width: 100%; */
+  padding: 0 20px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    /* align-items: center; */
+  }
 }
 
 .contacts__background-figure {
@@ -19,7 +28,7 @@
   border-radius: 34px;
   padding: 42px 32px;
   /* max-width: 658px; */
-  width: 100%;
+  /* width: 100%; */
 }
 
 .contacts__form > .accent-button {
@@ -29,21 +38,44 @@
 .contacts__form:first-child {
   margin-right: 120px;
   max-width: 440px;
+  /* width: 100%; */
+  width: 100%;
+
+  @media (max-width: 1320px) {
+    margin-right: 20px;
+  }
+
+  @media (max-width: 660px) {
+    max-width: none;
+    /* width: none; */
+    margin-right: 0;
+    /* background: red; */
+    padding: 0;
+    margin-bottom: 40px;
+  }
 }
 
 .contacts__form:last-child {
-    backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   border: 1px solid #b7b7b7;
+  /* display: flex;
+  flex-direction: column;
+  width: 100%; */
 }
 
 .form__title {
-  font-family: "Press Start 2P";
+  font-family: 'Press Start 2P';
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   color: #e6e6e6;
   margin-bottom: 24px;
+
+  @media (max-width: 1000px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .contacts__avatar {
@@ -51,7 +83,7 @@
 }
 
 h4.contacts__title {
-  font-family: "Press Start 2P";
+  font-family: 'Press Start 2P';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -66,4 +98,34 @@ h5.contacts__subtitle {
   font-size: 16px;
   line-height: 19px;
   color: #c2c2c2;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  color: var(--secondary-color);
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type='checkbox']:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+input[type='checkbox']:checked::before {
+  content: '✔';
+  color: rgb(110, 110, 110);
+  font-size: 14px;
+  /* color: var(--primary-color); */
 }

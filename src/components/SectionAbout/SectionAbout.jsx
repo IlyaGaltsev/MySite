@@ -20,7 +20,7 @@ function SectionAbout() {
         <button className="secoundary-button">Резюме</button>
       </div>
 
-      <SmoothMoveBlock />
+      <SmoothMoveBlock/>
 
       <img
         className="section-about__background"
