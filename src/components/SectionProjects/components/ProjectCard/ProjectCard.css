@@ -10,12 +10,6 @@
   line-height: 20px;
   color: #c8c8c8;
   margin-bottom: 16px;
-
-  @media (max-width: 1000px) {
-    font-size: 16px;
-    line-height: 16px;
-    margin-bottom: 12px;
-  }
 }
 
 .project-card__tech-tags {
@@ -23,10 +17,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-
-  @media (max-width: 1000px) {
-    gap: 8px;
-  }
 }
 
 .project-card > .project-card__tech-tags > span {
@@ -40,30 +30,19 @@
   line-height: 24px;
 
   color: #c8c8c8;
-
-  @media (max-width: 1000px) {
-    font-size: 16px;
-    line-height: 16px;
-  }
 }
 
 .project-card > img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 16px;
-
-  @media (max-width: 1000px) {
-    margin-bottom: 12px;
-  }
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-card__actions {
   display: flex;
   gap: 16px;
-
-  @media (max-width: 1000px) {
-    gap: 8px;
-  }
 }
 
 .project-card__actions > button {
@@ -74,7 +53,6 @@
 .project-card__actions > button :hover {
   color: #e9e9e9;
   cursor: pointer;
-  /* background: transparent; */
 }
 
 .project-card__actions > button > span {
@@ -85,10 +63,33 @@
   line-height: 24px;
   display: flex;
   align-items: center;
-  /* margin-right: 8px; */
+}
 
-  @media (max-width: 1000px) {
+@media (max-width: 1000px) {
+  .project-card__actions > button > span {
     font-size: 16px;
     line-height: 16px;
+  }
+
+  .project-card__actions {
+    gap: 8px;
+  }
+
+  .project-card > img {
+    margin-bottom: 12px;
+  }
+  .project-card > .project-card__tech-tags > span {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .project-card__tech-tags {
+    gap: 8px;
+  }
+
+  .project-card > h3 {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 12px;
   }
 }

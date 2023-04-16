@@ -10,7 +10,7 @@
 header {
   display: flex;
   justify-content: center;
-height: 52px;
+  height: 52px;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -18,25 +18,21 @@ height: 52px;
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
-
   width: 100%;
   line-height: 150%;
   letter-spacing: 0.04em;
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* padding: 4px 92px; */
 }
 
 .header__wrapper > nav > ul {
   list-style-type: none;
   display: flex;
-  font-family: "Press Start 2P";
+  font-family: 'Press Start 2P';
   gap: 24px;
   padding: 0;
+}
 
-  @media (max-width: 660px) {
-    display: none;
-  }
+.header__wrapper > nav > ul > li {
+  cursor: pointer;
 }
 
 .header_background {
@@ -51,4 +47,10 @@ height: 52px;
   align-items: center;
   width: 100%;
   padding: 0 20px;
+}
+
+@media (max-width: 660px) {
+  .header__wrapper > nav > ul {
+    display: none;
+  }
 }

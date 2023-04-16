@@ -1,33 +1,32 @@
-import React from 'react'
-
 import figure from '../../assets/images/background__figure.svg'
-import './SectionAbout.css'
 import SmoothMoveBlock from './SmoothMoveBlock'
+import './SectionAbout.css'
+import { useTranslation } from 'react-i18next'
 
 function SectionAbout() {
+  const { t } = useTranslation()
   return (
-    <div className="section-about__wrapper">
+    <section
+      id="main"
+      className="section-about__wrapper"
+    >
       <h1>
-        В поиске <span>web</span> разработчика?
+        {t('AboutTitle_first')} <span>web</span> {t('AboutTitle_second')}?
       </h1>
-      <p>
-        Специализируюсь на разработке интерфейсов. Люблю пробовать новое в программировании. Студент
-        3 курса Тамбовского Государственного Университета им. Г. Р. Державина, имею опыт продуктовой
-        разработки
-      </p>
-      <div className="section-about__buttons">
-        <button className="primary-button">Написать мне</button>
+      <p>{t('AboutSubTitle')}</p>
+      <div className="section-about__actions">
+        <button className="primary-button">Написать мне</button>
         <button className="secoundary-button">Резюме</button>
       </div>
 
-      <SmoothMoveBlock/>
+      <SmoothMoveBlock />
 
       <img
         className="section-about__background"
         src={figure}
         alt="background__figure"
       />
-    </div>
+    </section>
   )
 }
 

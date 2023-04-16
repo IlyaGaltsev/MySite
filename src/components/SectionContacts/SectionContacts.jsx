@@ -15,11 +15,10 @@ const SectionContacts = ({ handleOpenModal }) => {
   } = useForm()
 
   const submit = data => {
-    console.log(data)
-    // axios
-    //   .post('https://mysite-backend.onrender.com/api/submit-form', data)
-    //   .then(data => console.log('success'))
-    //   .catch(error => console.log(error.response))
+    axios
+      .post('https://mysite-backend.onrender.com/api/submit-form', data)
+      .then(data => alert.log('success'))
+      .catch(error => console.log(error.response))
   }
 
   return (
@@ -109,7 +108,7 @@ const SectionContacts = ({ handleOpenModal }) => {
         alt="figure"
       />
       <form className="contacts__form">
-        <h3 className="form__title">Или написать в другом мессенджере</h3>
+        <h3 className="form__title">Или написать в другом мессенджере</h3>
         <img
           className="contacts__avatar"
           src={avatar}
