@@ -12,7 +12,7 @@ const SectionProjects = () => {
       <div className="section-projects__grid">
         {projects.map(project => (
           <ProjectCard
-            key={project.key}
+            key={project.id}
             {...project}
           />
         ))}

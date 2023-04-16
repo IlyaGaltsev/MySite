@@ -10,7 +10,7 @@
 header {
   display: flex;
   justify-content: center;
-
+height: 52px;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -33,6 +33,10 @@ header {
   font-family: "Press Start 2P";
   gap: 24px;
   padding: 0;
+
+  @media (max-width: 660px) {
+    display: none;
+  }
 }
 
 .header_background {
@@ -46,4 +50,5 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 0 20px;
 }

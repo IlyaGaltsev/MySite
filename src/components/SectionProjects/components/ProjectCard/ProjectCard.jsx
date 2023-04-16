@@ -6,8 +6,8 @@ const ProjectCard = ({ image, title, description, deploy, github, technologies }
     <div className="project-card">
       <h3>{title}</h3>
       <div className="project-card__tech-tags">
-        {technologies.map(tech => (
-          <span>{tech}</span>
+        {technologies.map((tech, index) => (
+          <span key={index}>{tech}</span>
         ))}
       </div>
       <img

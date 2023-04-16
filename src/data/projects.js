@@ -22,15 +22,15 @@ export const projects = [
     github: 'https://github.com/IlyaGaltsev/RealTime-Chat',
     technologies: ['React-Native', 'Styled-components']
   },
-  {
-    id: 214,
-    image: chat,
-    title: 'Мобилтест',
-    description: 'Платфлорма для тестирования',
-    deploy: 'https://mobiltest.ru', //'https://creeate-react-app-788767876799.web.app/chat'
-    github: '',
-    technologies: ['Nuxt 2', 'SCSS']
-  },
+  // {
+  //   id: 214,
+  //   image: chat,
+  //   title: 'Мобилтест',
+  //   description: 'Платфлорма для тестирования',
+  //   deploy: 'https://mobiltest.ru', //'https://creeate-react-app-788767876799.web.app/chat'
+  //   github: '',
+  //   technologies: ['Nuxt 2', 'SCSS']
+  // },
   {
     id: 2,
     image: task,

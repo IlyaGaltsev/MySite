@@ -19,7 +19,7 @@ code {
   justify-content: center;
 }
 html {
-  --primary-color: #acacac;
+  --primary-color: #9fee61;
   --secondary-color: #acacac;
   --background-color: #1c1c1c;
   background: var(--background-color);
@@ -100,4 +100,10 @@ section {
 
 .accent-button > object {
   margin-left: 10px;
+}
+
+.link {
+  color: var(--primary-color);
+  cursor: pointer;
+  text-decoration: none;
 }

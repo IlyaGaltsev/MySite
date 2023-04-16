@@ -10,7 +10,7 @@ const SectionSkills = () => {
       <h2>Hard Skills|</h2>
       <div className="hard-skills__list">
         {skills.map((skill) => (
-          <SkillCard key={skill.id} {...skill} />
+          <SkillCard key={skill.name} {...skill} />
         ))}
       </div>
       </div>
