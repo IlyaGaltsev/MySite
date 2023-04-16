@@ -1,11 +1,23 @@
-.skillCard{
-    display: flex;
-    align-items: center;
+.skills__card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
 }
-.skillCard img{
-    margin-right: 18px;
-    max-width: 40px;
+
+.skills__card:last-child {
+  margin-bottom: 0;
 }
-@media(max-width:559px){
-    .skillCard{}
+.skills__card > p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #e6e6e6;
+}
+
+.skills__card img {
+  margin-right: 12px;
 }

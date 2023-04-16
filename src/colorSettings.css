@@ -1,4 +1,4 @@
-html[data-theme="light"]{
+/* html[data-theme="light"]{
     --text-color:rgb(43, 43, 43);
     --bg-color:white;
     --primary-color:#4C5497;
@@ -9,4 +9,4 @@ html[data-theme="dark"]{
     --bg-color:black;
     --primary-color:#4C5497;
     --outline-color:#3d3d3d;
-}
+} */

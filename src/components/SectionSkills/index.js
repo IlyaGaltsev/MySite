@@ -1,0 +1,1 @@
+export { SectionSkills } from "./SectionSkills";

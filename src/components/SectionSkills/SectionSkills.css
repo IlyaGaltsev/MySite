@@ -1,64 +1,39 @@
-.section-skill__wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 24px 0 24px;
-    max-width: 700px;
+.section-skills__hard-skills {
+  position: relative;
+  padding: 42px 32px;
+  background: rgba(122, 122, 122, 0.02);
+  backdrop-filter: blur(5px);
+  border-radius: 34px;
+  border: 1px solid #b7b7b7;
+  margin-bottom: 160px;
 }
-.section-skill__title{
-    margin-top: 60px;
+
+.section-skills__hard-skills > h2 {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: #e6e6e6;
+  margin-bottom: 24px;
 }
-.section-skill__text{
-    margin-top: 30px;
-    margin-bottom: 32px;
+
+.hard-skills__list {
+  position: relative;
+  
 }
-.section-skill__skills{
-    text-align: left;
-    width: 40%;
+.section-skills {
+  position: relative;
 }
-.skills__wrapper{
-    gap: 12px;
-    display: flex;
-    flex-direction: column;
-}
-.skills__title{
-    margin-bottom: 18px;
-}
-.section-skill__wrapperframe{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 42px;
-}
-.skills-other{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.skills-other__wrapper{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    width: 100%;
-}
-@media(max-width:554px){
-    .section-skill__wrapperframe{
-        flex-direction: column;
-        align-items: center;
-    }
-    .section-skill__skills{
-        width: 100%;
-    }
-}
-@media(max-width:559px){
-    .skills-other__wrapper{
-        justify-content: center;
-    }
-    .section-skill__skills{
-        text-align: center;
-    }
+.section-skills::after {
+  content: "";
+  width: 769px;
+  height: 882px;
+  position: absolute;
+  top: -20px;
+  left: -20%;
+  z-index: -40;
+  background-image: url("../../assets/images/background__figure_light.svg");
+  background-position: left;
+  background-size: 100%;
 }

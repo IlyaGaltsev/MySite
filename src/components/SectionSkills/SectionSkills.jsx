@@ -1,32 +1,21 @@
-import React from 'react';
-import './SectionSkills.css';
-import Moment from "react-moment";
-// import skillsYear from '../../data/skillsYear';
-// import SkillCard from './components/SkillCard/SkillCard';
-// import skillsMonth from '../../data/skillsMonth';
-import skillsDop from '../../data/skillsOther';
-import SkillOtherCard from './components/SkillOtherCard/SkillOtherCard';
+import React from "react";
+import "./SectionSkills.css";
+import { skills } from "../../data/skills";
+import SkillCard from "./components/SkillCard/SkillCard";
 
-function SectionSkills() {
+const SectionSkills = () => {
   return (
-    <div className="section-skill__wrapper" id='skills'>
-      <h2 className='section-skill__title'>Технологический стек на <span className='primary-color'><Moment format="DD.MM.YY" interval={10000}/></span></h2>
-      <p className='section-skill__text'>
-      Так как я постоянно развиваюсь список будет периодически наполняться новыми технологиями. Так же помимо всех этих навыков проходил стажировку в дизайн студии где получил много опыта, а именно: работа в команде и базовые знания по UX/UI дизайну
-      </p>
-      {/* Мне нравится работать над различными технологиями, включая веб-разработку и разработку мобильных приложений. Моя цель - создавать приложения, которые решают реальные проблемы и облегчают жизнь пользователям. */}
-      <div className="section-skill__wrapperframe">
-      <div className="section-skill__skills skills-other">
-        <p className='skills__title'>Я владею:</p>
-        <div className='skills-other__wrapper'>
-          {skillsDop.map(skill => <SkillOtherCard key={skill.id} name={skill.name}/>)}
-        </div>
+    <section className="section-skills" id="skills">
+      <div className="section-skills__hard-skills">
+      <h2>Hard Skills|</h2>
+      <div className="hard-skills__list">
+        {skills.map((skill) => (
+          <SkillCard key={skill.id} {...skill} />
+        ))}
       </div>
       </div>
-
-      
-    </div>
+    </section>
   );
-}
+};
 
-export default SectionSkills;
+export { SectionSkills };

@@ -1,37 +1,84 @@
-.section-about__wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    max-width: 700px;
-    padding: 0 24px 0 24px;
+.section-about__wrapper {
+  height: 100vh;
+  max-height: 1500px;
+  position: relative;
+  z-index: 1;
+  padding: 100px 0 0;
 }
-.section-about__title{
-    display: flex;
-    align-items:flex-end;
-    justify-content: center;
-    margin-top: 30%;
-    margin-bottom: 4px;
+
+.section-about__wrapper > h1 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 84px;
+  line-height: 84px;
+  color: #ffffff;
+  max-width: 1200px;
+  margin-bottom: 40px;
 }
-.title__icon{
-    max-height: 68px;
-    margin-left: 10px;
+
+.section-about__wrapper > p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  max-width: 740px;
+  color: #ffffff;
+  margin-bottom: 28px;
 }
-.section-about__text{
-    margin-top: 40px;
+
+.section-about__buttons {
+  display: flex;
 }
-.section-about__button{
-    margin-top: 40px;
+
+.section-about__buttons > button:nth-child(1) {
+  margin-right: 16px;
 }
-@media(max-width:594px){
-    .section-about__title{
-        display: block;
-    }
-    .section-about__button{
-        width: 100%;
-    }
-    .section-about__title{
-        margin-top: 50%;
-    }
+
+.section-about__avatar {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  z-index: 2;
+}
+
+.section-about__background {
+  position: absolute;
+  top: -100px;
+  right: -30px;
+}
+
+.section-about__wrapper > h1 > span {
+  color: #9fee61;
+}
+
+.section-about__illustration {
+  position: absolute;
+  bottom: 0;
+  right: 90px;
+  width: 792px;
+  height: 602px;
+}
+
+.section-about__illustration > .card-app {
+  top: 40px;
+  right: -200px;
+  z-index: 2;
+}
+
+.section-about__illustration > .slider {
+  top: 260px;
+  right: 90px;
+  z-index: 2;
+}
+
+.section-about__illustration > .desktop {
+  top: -400px;
+  right: -600px;
+}
+
+.section-about__illustration > .abstract {
+  top: 40px;
+  right: 240px;
+  z-index: 2;
 }
