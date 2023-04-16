@@ -25,8 +25,6 @@ const Main = () => {
         <SectionProjects />
         <SectionContacts handleOpenModal={handleOpen} />
 
-        {/* Modal termsOfUse */}
-
         <div>
           <button onClick={handleOpen}>Открыть модальное окно</button>
           {isOpen && (

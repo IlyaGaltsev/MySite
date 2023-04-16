@@ -7,6 +7,7 @@
 .skills__card:last-child {
   margin-bottom: 0;
 }
+
 .skills__card > p {
   font-family: "Montserrat";
   font-style: normal;

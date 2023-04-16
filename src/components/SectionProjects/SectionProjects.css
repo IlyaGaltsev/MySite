@@ -10,11 +10,6 @@
   line-height: 59px;
   color: #e6e6e6;
   margin-bottom: 40px;
-
-  @media (max-width: 1000px) {
-    font-size: 32px;
-    line-height: 32px;
-  }
 }
 
 .section-projects__grid {
@@ -22,17 +17,30 @@
   grid-template-columns: repeat(3, 1fr);
   column-gap: 32px;
   row-gap: 52px;
+}
 
-  @media (max-width: 1320px) {
+@media (max-width: 1320px) {
+  .section-projects__grid {
     column-gap: 24px;
     row-gap: 32px;
   }
+}
 
-  @media (max-width: 1270px) {
+@media (max-width: 1270px) {
+  .section-projects__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  @media (max-width: 660px) {
+@media (max-width: 1000px) {
+  .section-projects > h2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 660px) {
+  .section-projects__grid {
     grid-template-columns: repeat(1, 1fr);
   }
 }

@@ -1,5 +1,4 @@
 .section-skills {
-  /* width: 100%; */
   padding: 0 20px;
 }
 
@@ -11,7 +10,6 @@
   border-radius: 34px;
   border: 1px solid #b7b7b7;
   margin-bottom: 160px;
-
 }
 
 .section-skills__hard-skills > h2 {
@@ -31,7 +29,7 @@
 .section-skills {
   position: relative;
 }
-.section-skills::after {
+.section-skills::before {
   content: "";
   width: 769px;
   height: 882px;
