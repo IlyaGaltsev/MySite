@@ -3,6 +3,8 @@ import { Link } from 'react-scroll'
 import { useLayoutEffect } from 'react'
 import React from 'react'
 import i18n from '../../i18next'
+import { HiOutlineMenuAlt3 } from 'react-icons/hi'
+import logo from '../../assets/icons/logo.svg'
 
 function Header() {
   useLayoutEffect(() => {
@@ -19,62 +21,92 @@ function Header() {
     i18n.changeLanguage(e.target.value)
   }
 
+  const navigation = [
+    {
+      label: 'Обо мне',
+      anchor: 'main'
+    },
+    {
+      label: 'Навыки',
+      anchor: 'skills'
+    },
+    {
+      label: 'Проекты',
+      anchor: 'projects'
+    },
+    {
+      label: 'Контакты',
+      anchor: 'contacts'
+    }
+  ]
+
   return (
     <header>
       <div className="header__wrapper">
-        <nav>
-          <ul>
-            <li>
+        {/* <nav> */}
+        {/* <ul>
+            {navigation.map(({ label, anchor }) => {
+              return (
+                <li>
+                  <Link
+                    to={anchor}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-70}
+                  >
+                    <span>#</span>
+                    {label}
+                  </Link>
+                </li>
+              )
+            })} */}
+
+        {/* <li>
               <Link
-                to="main"
+                to=""
                 smooth={true}
                 duration={500}
                 spy={true}
                 exact="true"
                 offset={-70}
               >
-                Обо мне
+                
               </Link>
             </li>
             <li>
               <Link
-                to="skills"
+                to=""
                 smooth={true}
                 duration={500}
                 spy={true}
                 exact="true"
                 offset={-70}
               >
-                Навыки
+                
               </Link>
             </li>
             <li>
               <Link
-                to="projects"
+                to=""
                 smooth={true}
                 duration={500}
                 spy={true}
                 exact="true"
                 offset={-70}
               >
-                Проекты
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="contacts"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-70}
-              >
-                Контакты
+                
               </Link>
             </li>
           </ul>
-        </nav>
-        <div className="header__toggle-landuage">
+        </nav> */}
+        <img
+          src={logo}
+          alt="GI"
+        />
+        <HiOutlineMenuAlt3 size={32} />
+        {/* <div className="header__toggle-landuage">
           {' '}
           <select
             onChange={changeLanguage}
@@ -83,7 +115,7 @@ function Header() {
             <option value="en">A</option>
             <option value="ru">РУ</option>
           </select>
-        </div>
+        </div> */}
       </div>
     </header>
   )

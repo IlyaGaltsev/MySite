@@ -1,0 +1,76 @@
+.contacts {
+  display: flex;
+  position: relative;
+  // align-items: flex-start;
+  flex-direction: column;
+  padding: 0 20px;
+
+  &__subtitle {
+    color: #c8c8c8;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 40px;
+  }
+
+  &__wrapper {
+  }
+
+  &__left {
+    max-width: 800px;
+  }
+
+  &__right {
+  }
+}
+
+.contacts__form {
+  background: rgba(122, 122, 122, 0.02);
+  max-width: 580px;
+  border-radius: 34px;
+}
+
+.contacts__form > .accent-button {
+  margin-top: 20px;
+}
+
+.form__title {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #e6e6e6;
+  margin-bottom: 24px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--secondary-color);
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type='checkbox']:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+input[type='checkbox']:checked::before {
+  content: '✔';
+  color: rgb(110, 110, 110);
+  font-size: 14px;
+}

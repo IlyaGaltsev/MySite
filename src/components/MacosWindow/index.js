@@ -1,0 +1,1 @@
+export { MacosWindow } from './MacosWindow'
