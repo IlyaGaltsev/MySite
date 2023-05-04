@@ -1,0 +1,9 @@
+.section-skills {
+  padding: 0 20px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}

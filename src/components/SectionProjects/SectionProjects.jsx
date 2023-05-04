@@ -8,7 +8,7 @@ const SectionProjects = () => {
       className="section-projects"
       id="projects"
     >
-      <h2>Проекты</h2>
+      <h2 className="app-title-h2">Проекты</h2>
       <div className="section-projects__grid">
         {projects.map(project => (
           <ProjectCard

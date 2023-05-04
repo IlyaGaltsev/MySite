@@ -26,7 +26,6 @@ const Main = () => {
         <SectionContacts handleOpenModal={handleOpen} />
 
         <div>
-          <button onClick={handleOpen}>Открыть модальное окно</button>
           {isOpen && (
             <div
               className="modal-wrapper"

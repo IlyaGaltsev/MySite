@@ -2,15 +2,7 @@
   padding: 0 20px;
 }
 
-.section-projects > h2 {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 48px;
-  line-height: 59px;
-  color: #e6e6e6;
-  margin-bottom: 40px;
-}
+
 
 .section-projects__grid {
   display: grid;
@@ -33,10 +25,7 @@
 }
 
 @media (max-width: 1000px) {
-  .section-projects > h2 {
-    font-size: 32px;
-    line-height: 32px;
-  }
+
 }
 
 @media (max-width: 660px) {

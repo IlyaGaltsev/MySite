@@ -1,19 +1,14 @@
-import './ProjectCard.css'
+import './ProjectCard.scss'
 import { AiOutlineGlobal, AiOutlineGithub } from 'react-icons/ai'
 
 const ProjectCard = ({ image, title, description, deploy, github, technologies }) => {
   return (
     <div className="project-card">
-      <h3>{title}</h3>
-      <div className="project-card__tech-tags">
-        {technologies.map((tech, index) => (
-          <span key={index}>{tech}</span>
-        ))}
-      </div>
       <img
         src={image}
         alt={`prewiew ${title}`}
       />
+      <h3>{title}</h3>
       <div className="project-card__actions">
         {github && (
           <button>
@@ -26,7 +21,7 @@ const ProjectCard = ({ image, title, description, deploy, github, technologies }
         {deploy && (
           <button>
             <span>
-              Deploy  
+              Сайт  
               <AiOutlineGlobal size={20} />
             </span>
           </button>

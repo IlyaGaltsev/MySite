@@ -35,13 +35,18 @@ header {
   cursor: pointer;
 }
 
+.header__wrapper > nav > ul a > span {
+ color: #C778DD;
+}
+
+
 .header_background {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid gray;
 }
 
 .header__wrapper {
-  max-width: 1440px;
+  max-width: 1340px;
   display: flex;
   justify-content: space-between;
   align-items: center;
