@@ -10,6 +10,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   overflow-x: hidden;
+
+  -ms-user-select: none; 
+		-moz-user-select: none; 
+		-webkit-user-select: none; 
+		user-select: none; 
 }
 
 code {
@@ -31,6 +36,7 @@ html {
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1,
@@ -51,10 +57,9 @@ textarea {
 
 button {
   transition: all 0.2s ease-in-out;
-
 }
 
-section:not(:first-child)  {
+section:not(:first-child) {
   margin-bottom: 240px;
 
   @media (max-width: $min-medium-screen) {
@@ -63,7 +68,7 @@ section:not(:first-child)  {
 }
 
 #contacts {
-  margin-bottom: 120px;
+  margin-bottom: 180px;
 
   @media (max-width: $small-screen) {
     margin-bottom: 40px;
@@ -117,8 +122,6 @@ section:not(:first-child)  {
 .primary-button:hover {
   background: #c4f041;
   outline: 2px solid #9ac124;
-
-  
 }
 
 .primary-button:active {
@@ -195,13 +198,14 @@ section:not(:first-child)  {
 
 a {
   position: relative;
+  cursor: pointer;
 }
 
-a:hover::after {
+.animate-link:hover::after {
   transform: scaleX(1);
 }
 
-a::after {
+.animate-link::after {
   content: '';
   position: absolute;
   bottom: -2px;

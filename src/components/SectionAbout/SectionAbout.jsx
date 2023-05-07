@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import avatar from '../../assets/images/avatar.png'
 import decorateArrow1 from '../../assets/images/decorate-arrow1.svg'
 import decorateArrow2 from '../../assets/images/decorate-arrow2.svg'
+import { Link } from 'react-scroll'
 
 function SectionAbout() {
   const { t } = useTranslation()
@@ -16,7 +17,17 @@ function SectionAbout() {
         <h1>{t('AboutTitle_first')}</h1>
         <p>{t('AboutSubTitle')}</p>
         <div className="section-about__actions">
-          <button className="primary-button">Связaться</button>
+          <Link
+          style={{transform: 'none', position: 'static'}}
+            to={'contacts'}
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-70}
+          >
+            <button className="primary-button">Связaться</button>
+          </Link>
           <button className="secoundary-button">Скачать резюме</button>
         </div>
       </div>
