@@ -5,6 +5,7 @@ import { SectionAbout } from '../../components/SectionAbout'
 import Header from '../../components/Header/Header'
 import { useState } from 'react'
 import './Main.css'
+import { SectionBlog } from '../../components/SectionBlog'
 
 const Main = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,8 +24,8 @@ const Main = () => {
         <SectionAbout />
         <SectionSkills />
         <SectionProjects />
+        <SectionBlog/>
         <SectionContacts handleOpenModal={handleOpen} />
-
         <div>
           {isOpen && (
             <div

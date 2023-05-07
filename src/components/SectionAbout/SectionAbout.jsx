@@ -1,6 +1,5 @@
 import './SectionAbout.scss'
 import { useTranslation } from 'react-i18next'
-import { MacosWindow } from '../MacosWindow'
 import avatar from '../../assets/images/avatar.png'
 import decorateArrow1 from '../../assets/images/decorate-arrow1.svg'
 import decorateArrow2 from '../../assets/images/decorate-arrow2.svg'

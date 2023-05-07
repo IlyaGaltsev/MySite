@@ -1,5 +1,5 @@
 import './Header.css'
-import { Link } from 'react-scroll'
+// import { Link } from 'react-scroll'
 import { useLayoutEffect } from 'react'
 import React from 'react'
 import i18n from '../../i18next'
@@ -17,28 +17,28 @@ function Header() {
     })
   }, [])
 
-  const changeLanguage = e => {
-    i18n.changeLanguage(e.target.value)
-  }
+  // const changeLanguage = e => {
+  //   i18n.changeLanguage(e.target.value)
+  // }
 
-  const navigation = [
-    {
-      label: 'Обо мне',
-      anchor: 'main'
-    },
-    {
-      label: 'Навыки',
-      anchor: 'skills'
-    },
-    {
-      label: 'Проекты',
-      anchor: 'projects'
-    },
-    {
-      label: 'Контакты',
-      anchor: 'contacts'
-    }
-  ]
+  // const navigation = [
+  //   {
+  //     label: 'Обо мне',
+  //     anchor: 'main'
+  //   },
+  //   {
+  //     label: 'Навыки',
+  //     anchor: 'skills'
+  //   },
+  //   {
+  //     label: 'Проекты',
+  //     anchor: 'projects'
+  //   },
+  //   {
+  //     label: 'Контакты',
+  //     anchor: 'contacts'
+  //   }
+  // ]
 
   return (
     <header>
