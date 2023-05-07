@@ -1,6 +1,3 @@
-import backgroundfigure from '../../assets/images/background__figure_light.svg'
-import avatar from '../../assets/images/contacts-avatar.png'
-import telegram from '../../assets/icons/telegram.svg'
 import { useForm } from 'react-hook-form'
 import { TextFiled } from '../TextFiled'
 import './SectionContacts.scss'
@@ -29,12 +26,24 @@ const SectionContacts = ({ handleOpenModal }) => {
       <h2 className="app-title-h2">Контакты</h2>
       <div className="contacts__wrapper">
         <div className="contacts__left">
-          <p className='contacts__subtitle'>
-            Здесь вы можете отправить сообщение напрямую мне если у вас остались какие-либо вопросы
-            или предложения. Оставьте свои контактные данные и я свяжусь с вами.
+          <p className="contacts__subtitle">
+            Здесь вы можете отправить сообщение напрямую мне если у вас остались какие-либо вопросы
+            или предложения. Оставьте свои контактные данные в заявке и я свяжусь с вами.
           </p>
 
-          <form
+          <div className="contacts__card">
+            <p>Почта</p>
+            <a href='mailto:galsev_i@inbox.ru'>galsev_i@inbox.ru</a>
+          </div>
+
+          <div className="contacts__card">
+            <p>Телефон</p>
+            <a href='tel:+7 930 474 69 99'>+7 930 474 69 99</a>
+          </div>
+
+          <button className="primary-button">Заполнить заявку </button>
+
+          {/* <form
             className="contacts__form"
             onSubmit={handleSubmit(submit)}
           >
@@ -106,9 +115,14 @@ const SectionContacts = ({ handleOpenModal }) => {
               {errors.termsOfUse && <ErrorHandler message={errors.termsOfUse.message} />}
             </div>
             <button className="primary-button">Отправить</button>
-          </form>
+          </form> */}
         </div>
-        <div className="contacts__right"></div>
+        <div className="contacts__right">
+          <a href=''>GitHub</a>
+          <a href=''>Telegram</a>
+          <a href=''>WhatsApp</a>
+          <a href=''>VK</a>
+        </div>
       </div>
     </section>
   )

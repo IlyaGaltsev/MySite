@@ -1,3 +1,5 @@
+@import '../../assets/styles/constants.scss';
+
 .contacts {
   display: flex;
   position: relative;
@@ -11,17 +13,51 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 32px;
-    margin-bottom: 40px;
   }
 
   &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+
+    a {
+      align-self: flex-start;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #ffffff;
+
+      &:hover {
+        transform: none;
+      }
+    }
   }
 
   &__left {
-    max-width: 800px;
+    max-width: 728px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
   }
 
   &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #cdcdcd;
+    }
   }
 }
 
@@ -73,4 +109,31 @@ input[type='checkbox']:checked::before {
   content: '✔';
   color: rgb(110, 110, 110);
   font-size: 14px;
+}
+
+@media (max-width: $medium-screen) {
+  .contacts {
+    &__subtitle {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media (max-width: $small-screen) {
+  .contacts {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__left {
+      button {
+        width: 100%;
+      }
+    }
+
+    &__right {
+      flex-direction: row;
+    }
+  }
 }

@@ -1,19 +1,19 @@
-import './ProjectCard.scss'
+import './BlogCard.scss'
 import { AiOutlineGlobal, AiOutlineGithub } from 'react-icons/ai'
 import { BsArrowRight } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 
-const ProjectCard = ({ image, path, title, description, deploy, github, technologies }) => {
+const BlogCard = ({ image, path, title, description, deploy, github, technologies }) => {
   return (
-    <Link to={'/projects/1'} className="project-card">
+    <Link to={'/blogs/1'} className="blog-card">
       <img
         src={image}
         alt={`prewiew ${title}`}
       />
-      <div className="project-card__contant">
+      <div className="blog-card__contant">
         <div>
           <h3>{title}</h3>
-          <div className="project-card__actions">
+          <div className="blog-card__actions">
             {github && (
               <button>
                 <span>
@@ -32,10 +32,10 @@ const ProjectCard = ({ image, path, title, description, deploy, github, technolo
             )}
           </div>
         </div>
-        <BsArrowRight size={32} className="project-card__icon"/>
+        <BsArrowRight size={32} className="blog-card__icon"/>
       </div>
     </Link>
   )
 }
 
-export { ProjectCard }
+export { BlogCard }
