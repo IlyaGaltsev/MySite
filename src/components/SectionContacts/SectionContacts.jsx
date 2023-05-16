@@ -1,22 +1,23 @@
 import { useForm } from 'react-hook-form'
 import { TextFiled } from '../TextFiled'
 import './SectionContacts.scss'
-import axios from 'axios'
+// import axios from 'axios'
 import { ErrorHandler } from '../ErrorHandler'
+import { contacts } from '../../data/contacts'
 
-const SectionContacts = ({ handleOpenModal }) => {
+const SectionContacts = () => {
   const {
     register,
     formState: { errors },
     handleSubmit
   } = useForm()
 
-  const submit = data => {
-    axios
-      .post('https://mysite-backend.onrender.com/api/submit-form', data)
-      .then(data => alert.log('success'))
-      .catch(error => console.log(error.response))
-  }
+  // const submit = data => {
+  //   axios
+  //     .post('https://mysite-backend.onrender.com/api/submit-form', data)
+  //     .then(data => alert.log('success'))
+  //     .catch(error => console.log(error.response))
+  // }
 
   return (
     <section
@@ -33,12 +34,22 @@ const SectionContacts = ({ handleOpenModal }) => {
 
           <div className="contacts__card">
             <p>Почта</p>
-            <a href='mailto:galsev_i@inbox.ru'>galsev_i@inbox.ru</a>
+            <a
+              className="animate-link"
+              href={contacts.email}
+            >
+              galsev_i@inbox.ru
+            </a>
           </div>
 
           <div className="contacts__card">
             <p>Телефон</p>
-            <a href='tel:+7 930 474 69 99'>+7 930 474 69 99</a>
+            <a
+              className="animate-link"
+              href={contacts.phone}
+            >
+              +7 930 474 69 99
+            </a>
           </div>
 
           <button className="primary-button">Заполнить заявку </button>
@@ -118,10 +129,38 @@ const SectionContacts = ({ handleOpenModal }) => {
           </form> */}
         </div>
         <div className="contacts__right">
-          <a href=''>GitHub</a>
-          <a href=''>Telegram</a>
-          <a href=''>WhatsApp</a>
-          <a href=''>VK</a>
+          <a
+             className='animate-link'
+            href={contacts.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+             className='animate-link'
+            href={contacts.telegram}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Telegram
+          </a>
+          <a
+             className='animate-link'
+            href={contacts.whatsApp}
+            target="_blank"
+            rel="noreferrer"
+          >
+            WhatsApp
+          </a>
+          <a
+             className='animate-link'
+            href={contacts.vk}
+            target="_blank"
+            rel="noreferrer"
+          >
+            VK
+          </a>
         </div>
       </div>
     </section>

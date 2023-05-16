@@ -1,19 +1,26 @@
 import './BlogCard.scss'
 import { AiOutlineGlobal, AiOutlineGithub } from 'react-icons/ai'
 import { BsArrowRight } from 'react-icons/bs'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
+// import { Link } from 'react-router-dom'
 
-const BlogCard = ({ image, path, title, description, deploy, github, technologies }) => {
+const BlogCard = ({
+  image,
+  path,
+  id,
+  title,
+  description,
+  deploy,
+  github,
+  technologies
+}) => {
   return (
-    <Link to={'/blogs/1'} className="blog-card">
-      <img
-        src={image}
-        alt={`prewiew ${title}`}
-      />
-      <div className="blog-card__contant">
+    <Link href={`/blog/${id}`} className='blog-card'>
+      <img src={image} alt={`prewiew ${title}`} />
+      <div className='blog-card__contant'>
         <div>
           <h3>{title}</h3>
-          <div className="blog-card__actions">
+          <div className='blog-card__actions'>
             {github && (
               <button>
                 <span>
@@ -32,7 +39,7 @@ const BlogCard = ({ image, path, title, description, deploy, github, technologie
             )}
           </div>
         </div>
-        <BsArrowRight size={32} className="blog-card__icon"/>
+        <BsArrowRight size={32} className='blog-card__icon' />
       </div>
     </Link>
   )

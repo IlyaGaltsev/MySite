@@ -1,5 +1,4 @@
-// import { BlogCard } from './components/BlogCard/BlogCard'
-import { blogs } from '../../data/blogs'
+import blogs from '@/data/blogs.json'
 import { BlogCard } from './components/ProjectCard/BlogCard'
 import './SectionBlog.css'
 
@@ -9,9 +8,9 @@ const SectionBlog = () => {
       className="section-blogs"
       id="blogs"
     >
-      <h2 className="app-title-h2">Мысли в слух</h2>
+      <h2 className="app-title-h2">Мысли вслух</h2>
       <div className="section-blogs__grid">
-        {blogs.map(blog => (
+        {blogs.data.map(blog => (
           <BlogCard
             key={blog.id}
             {...blog}
