@@ -1,0 +1,1 @@
+export { BlogTitleCard } from './BlogTitleCard'

@@ -1,4 +1,4 @@
-@import '../../assets/styles/constants.scss';
+@import '@/styles/constants.scss';
 
 .hide {
   transform: translateY(-70px);
@@ -129,4 +129,14 @@ header {
   .header__wrapper > nav > ul {
     display: none;
   }
+}
+
+
+.progress {
+  height: 4px;
+  background-color: #eee;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
 }

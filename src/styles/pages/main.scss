@@ -1,0 +1,9 @@
+@import '../constants.scss';
+
+section:not(:first-child) {
+  margin-bottom: 240px;
+
+  @media (max-width: $min-medium-screen) {
+    margin-bottom: 160px;
+  }
+}

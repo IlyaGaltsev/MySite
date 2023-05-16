@@ -1,0 +1,49 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "image": "/images/chat.png",
+      "title": "Realtime Chat",
+      "description": "Чат для обмена сообщениями в реальном времени",
+      "deploy": "/",
+      "github": "https://github.com/IlyaGaltsev/RealTime-Chat",
+      "technologies": ["React", "SCSS", "Firebase"]
+    },
+    {
+      "id": 1213,
+      "image": "/images/chat.png",
+      "title": "Realtime Chat Mobile",
+      "description": "Чат для обмена сообщениями в реальном времени",
+      "deploy": "",
+      "github": "https://github.com/IlyaGaltsev/RealTime-Chat",
+      "technologies": ["React-Native", "Styled-components"]
+    },
+    {
+      "id": 2,
+      "image": "/images/taskManager.png",
+      "title": "Task Manager",
+      "description": "Менеджер задач с сохранением задач в localStorage",
+      "deploy": "https://ilyagaltsev.github.io/task-manager-TS/",
+      "github": "https://github.com/IlyaGaltsev/task-manager-TS",
+      "technologies": ["React", "TS", "Emotion"]
+    },
+    {
+      "id": 3,
+      "image": "/images/SITE.png",
+      "title": "Cайт-резюме",
+      "description": "Сайт про меня в сфере IT (этот сайт)",
+      "deploy": "ilyagaltsev.github.io/MySite/",
+      "github": "https://github.com/IlyaGaltsev/MySite",
+      "technologies": ["React.js"]
+    },
+    {
+      "id": 4,
+      "image": "/images/lift.png",
+      "title": "ООО ПриоритетЛифт",
+      "description": "Сайт для компании (В разработке)",
+      "deploy": "https://howeverdigital.webflow.io/",
+      "github": "/",
+      "technologies": ["Webflow", "JS"]
+    }
+  ]
+}

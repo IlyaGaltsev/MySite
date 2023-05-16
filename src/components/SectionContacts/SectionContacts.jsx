@@ -1,23 +1,23 @@
 import { useForm } from 'react-hook-form'
 import { TextFiled } from '../TextFiled'
 import './SectionContacts.scss'
-import axios from 'axios'
+// import axios from 'axios'
 import { ErrorHandler } from '../ErrorHandler'
 import { contacts } from '../../data/contacts'
 
-const SectionContacts = ({ handleOpenModal }) => {
+const SectionContacts = () => {
   const {
     register,
     formState: { errors },
     handleSubmit
   } = useForm()
 
-  const submit = data => {
-    axios
-      .post('https://mysite-backend.onrender.com/api/submit-form', data)
-      .then(data => alert.log('success'))
-      .catch(error => console.log(error.response))
-  }
+  // const submit = data => {
+  //   axios
+  //     .post('https://mysite-backend.onrender.com/api/submit-form', data)
+  //     .then(data => alert.log('success'))
+  //     .catch(error => console.log(error.response))
+  // }
 
   return (
     <section
