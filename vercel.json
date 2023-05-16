@@ -1,1 +1,6 @@
-{ "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
+{
+  "public": true,
+  "env": {
+    "VERCEL_BRANDING_DISABLED": "1"
+  }
+}
