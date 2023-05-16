@@ -7,7 +7,7 @@ const BurgerMenu = ({setVisibleMenu}) => {
     return(
         <div className="burger-menu__wrapper">
             <div className="burger-menu__buttons">
-                {links.map(link => <Link id={link.id} link={link} setVisibleMenu={setVisibleMenu}/>)}
+                {links.map(link => <Link key={link.id} id={link.id} link={link} setVisibleMenu={setVisibleMenu}/>)}
             </div>
         </div>
     )
