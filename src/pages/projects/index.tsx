@@ -2,17 +2,19 @@ import { BackButton } from '@/components/BackButton'
 import { SectionContacts } from '@/components/SectionContacts'
 import { ProjectCard } from '@/components/SectionProjects/components/ProjectCard'
 import '@/styles/pages/projects.scss'
+import fs from 'fs';
+import path from 'path';
 
 export async function getServerSideProps() {
-  const fs = require('fs')
-  const projectsData = fs.readFileSync('public/data/projects.json', 'utf8')
-  const projects = JSON.parse(projectsData)
+  const filePath = path.join(process.cwd(), 'public/data/projects.json');
+  const jsonData = fs.readFileSync(filePath, 'utf8');
+  const projects = JSON.parse(jsonData);
 
   return {
     props: {
-      projects: projects || null
-    }
-  }
+      projects,
+    },
+  };
 }
 
 export default function Projects({projects}: any) {
