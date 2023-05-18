@@ -1,6 +1,7 @@
 {
   "public": true,
   "env": {
-    "VERCEL_BRANDING_DISABLED": "1"
+    "VERCEL_BRANDING_DISABLED": "1",
+    "VERCEL_HIDE_DEPLOY_BUTTON": "true"
   }
 }

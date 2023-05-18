@@ -4,20 +4,14 @@ import './SectionContacts.scss'
 // import axios from 'axios'
 import { ErrorHandler } from '../ErrorHandler'
 import { contacts } from '../../data/contacts'
+import { useState } from 'react'
+import { ModalContacts } from './ModalContacts'
 
 const SectionContacts = () => {
-  const {
-    register,
-    formState: { errors },
-    handleSubmit
-  } = useForm()
+  const [isOpenModal, setOpenModal] = useState(false)
+ 
 
-  // const submit = data => {
-  //   axios
-  //     .post('https://mysite-backend.onrender.com/api/submit-form', data)
-  //     .then(data => alert.log('success'))
-  //     .catch(error => console.log(error.response))
-  // }
+  
 
   return (
     <section
@@ -52,8 +46,16 @@ const SectionContacts = () => {
             </a>
           </div>
 
-          <button className="primary-button">Заполнить заявку </button>
-
+          <button
+            className="primary-button"
+            onClick={() => setOpenModal(true)}
+          >
+            Заполнить заявку
+          </button>
+          <ModalContacts
+            isOpen={isOpenModal}
+            closeModal={() => setOpenModal(false)}
+          />
           {/* <form
             className="contacts__form"
             onSubmit={handleSubmit(submit)}
@@ -130,7 +132,7 @@ const SectionContacts = () => {
         </div>
         <div className="contacts__right">
           <a
-             className='animate-link'
+            className="animate-link"
             href={contacts.github}
             target="_blank"
             rel="noreferrer"
@@ -138,7 +140,7 @@ const SectionContacts = () => {
             GitHub
           </a>
           <a
-             className='animate-link'
+            className="animate-link"
             href={contacts.telegram}
             target="_blank"
             rel="noreferrer"
@@ -146,7 +148,7 @@ const SectionContacts = () => {
             Telegram
           </a>
           <a
-             className='animate-link'
+            className="animate-link"
             href={contacts.whatsApp}
             target="_blank"
             rel="noreferrer"
@@ -154,7 +156,7 @@ const SectionContacts = () => {
             WhatsApp
           </a>
           <a
-             className='animate-link'
+            className="animate-link"
             href={contacts.vk}
             target="_blank"
             rel="noreferrer"

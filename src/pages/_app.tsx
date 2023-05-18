@@ -46,6 +46,7 @@ export default function MyApp({ Component, pageProps }: any) {
              --background-color: #0E1116;
               // #1c1c1c;
               --background-card: #21262d;
+              --subtitle-color: #8b949e;
              background: var(--background-color);
            
              --min-desktop: 1140px;
