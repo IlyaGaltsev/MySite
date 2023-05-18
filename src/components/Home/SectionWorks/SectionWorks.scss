@@ -1,3 +1,5 @@
+@import '@/styles/constants.scss';
+
 .section-works {
   display: flex;
   gap: 18px;
@@ -14,6 +16,9 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: -1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &__card {
@@ -51,6 +56,83 @@
       font-size: 18px;
       line-height: 18px;
       color: #ffffff;
+    }
+  }
+}
+
+@media (max-width: 1240px) {
+  .section-works {
+    &::after {
+      width: 800px;
+      height: 600px;
+    }
+  }
+}
+
+@media (max-width: $medium-screen) {
+  .section-works {
+    &::after {
+      width: 400px;
+      height: 200px;
+    }
+
+    &__card {
+      h3 {
+        font-size: px;
+        line-height: 28px;
+        margin-bottom: 16px;
+
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 32px;
+      }
+
+      a {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: $min-medium-screen) {
+  .section-works {
+    flex-direction: column;
+
+    &__card {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: $small-screen) {
+  .section-works {
+    &::after {
+      width: 280px;
+      height: 200px;
+    }
+
+    &__card {
+      padding: 28px 20px;
+      h3 {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 32px;
+      }
+
+      a {
+        font-size: 16px;
+        line-height: 16px;
+      }
     }
   }
 }
