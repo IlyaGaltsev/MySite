@@ -1,9 +1,7 @@
-import { SectionAbout } from '@/components/Projects/SectionAbout'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import '@/styles/pages/project.scss'
 import { BackButton } from '@/components/BackButton'
-import { useMemo } from 'react'
 import { SectionContacts } from '@/components/SectionContacts'
 
 export async function getServerSideProps({ params }: any) {

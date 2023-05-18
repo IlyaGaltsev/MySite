@@ -1,9 +1,9 @@
 import './SectionSkills.scss'
 import SkillCard from './components/SkillCard/SkillCard'
-import * as skills from '@/data/skills.json'
 
-const SectionSkills = () => {
-  console.log(skills)
+
+const SectionSkills = ({skills}) => {
+
   return (
     <section
       className="section-skills"

@@ -98,24 +98,24 @@ function SectionAbout() {
           className="illustration__bottom-arrow"
           src="/images/decorate-arrow1.svg"
           alt="decorate-item"
-          width={window.innerWidth < 480 ? 180 : 262}
-          height={window.innerWidth < 480 ? 180 : 262}
+          width={262}
+          height={262}
           priority
         />
         <Image
           className="illustration__top-arrow"
           src="/images/decorate-arrow2.svg"
           alt="decorate-item"
-          width={window.innerWidth < 480 ? 72 :96}
-          height={window.innerWidth < 480 ? 72 :96}
+          width={96}
+          height={96}
           priority
         />
         <Image
           className="illustration__avatar"
           src="/images/avatar.png"
           alt="my-photo"
-          width={window.innerWidth < 480 ? 200 : 229}
-          height={window.innerWidth < 480 ? 220 : 254}
+          width={229}
+          height={254}
           priority
         />
       </div>
