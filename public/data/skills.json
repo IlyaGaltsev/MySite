@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "image": "/icons/frontend.svg",
+      "title": "Frontend",
+      "description": "Мой опыт в веб-разработке включает в себя создание более 5 масштабируемых веб-приложений",
+      "techs": [
+        "React",
+        "Vue",
+        "Nuxt",
+        "TypeScript",
+        "SCSS",
+        "Styled-components",
+        "Antd",
+        "Mui"
+      ]
+    },
+    {
+      "image": "/icons/mobile.svg",
+      "title": "Mobile",
+      "description": "С изучением React пришел навык использования React-Native, написав несколько приложений понял что он достаточно медленный и пришел в Swift",
+      "techs": ["React-Native CLI", "Expo", "SwiftUi"]
+    },
+    {
+      "image": "/icons/backend.svg",
+      "title": "Backend",
+      "description": "В процессе разработки стало скучно разрабатывать интерфейсы со статическими данными, в связи с этим начал подключать firebase. По итогу его гибкости стало не хватать. В итоге приступил к освоению Node.js",
+      "techs": ["Firebase", "Node.js", "Expess"]
+    }
+  ]
+}
