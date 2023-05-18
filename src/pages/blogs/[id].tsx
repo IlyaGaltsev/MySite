@@ -19,29 +19,28 @@ export async function getServerSideProps() {
 export default function Blog({ blogs }: any) {
   const router = useRouter()
   const blog = blogs.data.find(({ id }: any) => id === Number(router.query.id))
-  const otherBlog = blogs.data.filter(
-    ({ id }: any) => id !== Number(router.query.id)
-  )
+  const otherBlog = blogs.data.filter(({ id }: any) => id !== Number(router.query.id))
 
   return (
     <main>
-      <section className='blog__wrapper'>
-        {blog !== null && blog !== undefined ? (
-          <BlogTitleCard {...blog} />
-        ) : null}
+      <section className="blog__wrapper">
+        {blog !== null && blog !== undefined ? <BlogTitleCard {...blog} /> : null}
 
-        <div className='blog__contant'>
+        <div className="blog__contant">
           <p>{blog?.text ?? ''}</p>
-          <div className='blog__other-blogs'>
+          <div className="blog__other-blogs">
             <h3>Другие статьи</h3>
             {otherBlog.map((blog: any) => {
               return (
-                <div key={blog.id} className="other-blog__card">
+                <div
+                  key={blog.id}
+                  className="other-blog__card"
+                >
                   <Image
                     src={blog.image ?? ''}
                     width={60}
                     height={60}
-                    alt='my-photo'
+                    alt="my-photo"
                     priority
                   />
                   <p>{blog.title}</p>
