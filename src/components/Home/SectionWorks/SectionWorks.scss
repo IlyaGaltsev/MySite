@@ -1,0 +1,56 @@
+.section-works {
+  display: flex;
+  gap: 18px;
+  position: relative;
+  width: 100%;
+  padding: 0 20px;
+
+  &::after {
+    content: '';
+    background: url('/images/gradient.png');
+    position: absolute;
+    width: 1186px;
+    height: 905px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    background: #21262d;
+    border-radius: 15px;
+    max-width: 50%;
+
+    h3 {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 39px;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      color: var(--subtitle-color);
+      margin-bottom: 44px;
+    }
+
+    a {
+      background: transparent;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 18px;
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.input {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.input > p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  color: #e6e6e6;
+  margin-bottom: 12px;
+}
+
+.input > input,
+.input > textarea {
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 16px;
+  padding: 20px 16px;
+  height: 44px;
+  width: 100%;
+  color: #e6e6e6;
+  background: #5A646C;
+  border-radius: 10px;
+}
+
+.input > textarea {
+  height: 140px;
+  resize: none;
+}
+
+.error > input,
+.error > textarea {
+  border: 1px solid red;
+}

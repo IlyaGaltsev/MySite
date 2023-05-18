@@ -2,6 +2,7 @@
 
 #starCanvas {
   position: absolute;
+  width: 100%;
   top:0;
   left: 50%;
   transform: translateX(-50%);
@@ -11,7 +12,6 @@
   &__wrapper {
     height: 100vh;
     max-height: 800px;
-    position: relative;
     z-index: 1;
     padding: 100px 20px 0;
     display: flex;
@@ -36,8 +36,8 @@
       font-style: normal;
       font-weight: 500;
       font-size: 20px;
-      line-height: 24px;
-      color: #d8d8d8;
+      line-height: 28px;
+      color: var(--subtitle-color);
       max-width: 700px;
       margin-bottom: 32px;
     }

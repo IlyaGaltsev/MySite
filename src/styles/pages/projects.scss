@@ -1,3 +1,5 @@
+@import '../constants.scss';
+
 .main-title {
   margin-top: 20vh;
   font-family: 'Montserrat';
@@ -20,10 +22,18 @@
   padding: 0 20px;
   width: 100%;
   text-align: center;
+  &:first-child {
+    margin-bottom: 240px;
 
+    @media (max-width: $min-medium-screen) {
+      margin-bottom: 160px;
+    }
+  }
   &__main {
-    padding-top: 20px;
+    padding-top: 40px;
     margin-bottom: 20vh;
+
+  
   }
 }
 
