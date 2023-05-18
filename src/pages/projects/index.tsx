@@ -1,10 +1,21 @@
 import { BackButton } from '@/components/BackButton'
 import { SectionContacts } from '@/components/SectionContacts'
 import { ProjectCard } from '@/components/SectionProjects/components/ProjectCard'
-import projects from '@/data/projects.json'
 import '@/styles/pages/projects.scss'
 
-export default function Projects() {
+export async function getServerSideProps() {
+  const fs = require('fs')
+  const projectsData = fs.readFileSync('public/data/projects.json', 'utf8')
+  const projects = JSON.parse(projectsData)
+
+  return {
+    props: {
+      projects: projects || null
+    }
+  }
+}
+
+export default function Projects({projects}: any) {
   return (
     <>
       <section
@@ -17,7 +28,7 @@ export default function Projects() {
           <p className="main-subtitle">Избранные работы которые принесли мне опыт разработки</p>
         </div>
         <div className="section-projects__grid">
-          {projects.data.map(project => (
+          {projects.data.map((project: any) => (
             <ProjectCard
               key={project.id}
               {...project}
