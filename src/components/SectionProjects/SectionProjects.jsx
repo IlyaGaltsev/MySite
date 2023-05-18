@@ -1,8 +1,7 @@
 import { ProjectCard } from './components/ProjectCard'
-import projects from '@/data/projects.json'
 import './SectionProjects.css'
 
-const SectionProjects = () => {
+const SectionProjects = ({projects}) => {
   return (
     <section className='section-projects' id='projects'>
       <h2 className='app-title-h2'>Проекты</h2>
