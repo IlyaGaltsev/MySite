@@ -4,6 +4,7 @@ import path from 'path'
 import fs from 'fs'
 import { BlogCard } from '@/components/SectionBlog/components/ProjectCard'
 import { SectionContacts } from '@/components/SectionContacts'
+import styles from '@/styles/global.module.scss'
 
 export async function getServerSideProps() {
   const filePath = path.join(process.cwd(), 'public/data/blogs.json')
@@ -26,7 +27,7 @@ export default function Blogs({ blogs }: any) {
     >
       <div className="section-projects__main">
         <BackButton path="/" />
-        <h1 className="main-title">Мысли вслух</h1>
+        <h1 className={`main-title ${styles.h1Page}`}>Мысли вслух</h1>
         <p className="main-subtitle">
           Накапливая опыт разработки, появились мысли которыми стоит поделиться
         </p>

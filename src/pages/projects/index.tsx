@@ -4,6 +4,7 @@ import { ProjectCard } from '@/components/SectionProjects/components/ProjectCard
 import '@/styles/pages/projects.scss'
 import fs from 'fs';
 import path from 'path';
+import styles from '@/styles/global.module.scss'
 
 export async function getServerSideProps() {
   const filePath = path.join(process.cwd(), 'public/data/projects.json');
@@ -26,7 +27,7 @@ export default function Projects({projects}: any) {
       >
         <div className="section-projects__main">
           <BackButton path="/" />
-          <h1 className="main-title">Проекты</h1>
+          <h1 className={`main-title ${styles.h1Page}`}>Проекты</h1>
           <p className="main-subtitle">Избранные работы которые принесли мне опыт разработки</p>
         </div>
         <div className="section-projects__grid">

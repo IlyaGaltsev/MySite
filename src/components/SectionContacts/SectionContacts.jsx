@@ -1,17 +1,10 @@
-import { useForm } from 'react-hook-form'
-import { TextFiled } from '../TextFiled'
-import './SectionContacts.scss'
-// import axios from 'axios'
-import { ErrorHandler } from '../ErrorHandler'
+import { ModalContacts } from './ModalContacts'
 import { contacts } from '../../data/contacts'
 import { useState } from 'react'
-import { ModalContacts } from './ModalContacts'
+import './SectionContacts.scss'
 
 const SectionContacts = () => {
   const [isOpenModal, setOpenModal] = useState(false)
- 
-
-  
 
   return (
     <section
@@ -25,7 +18,6 @@ const SectionContacts = () => {
             Здесь вы можете отправить сообщение напрямую мне если у вас остались какие-либо вопросы
             или предложения. Оставьте свои контактные данные в заявке и я свяжусь с вами.
           </p>
-
           <div className="contacts__card">
             <p>Почта</p>
             <a
@@ -56,79 +48,6 @@ const SectionContacts = () => {
             isOpen={isOpenModal}
             closeModal={() => setOpenModal(false)}
           />
-          {/* <form
-            className="contacts__form"
-            onSubmit={handleSubmit(submit)}
-          >
-            <TextFiled
-              title="Ваше имя"
-              name="name"
-              register={register}
-              error={errors.name}
-              options={{
-                required: {
-                  value: true,
-                  message: 'Обязательное поле'
-                },
-                maxLength: { value: 20, message: 'Превышена максимальная длинна' }
-              }}
-            />
-            <TextFiled
-              title="Адрес эл. почты"
-              name="email"
-              register={register}
-              error={errors.email}
-              options={{
-                required: {
-                  value: true,
-                  message: 'Обязательное поле'
-                },
-                pattern: {
-                  value: /\S+@\S+\.\S+/,
-                  message: 'Адрес не существует'
-                }
-              }}
-            />
-            <TextFiled
-              title="Текст сообщения"
-              type="textarea"
-              name="message"
-              register={register}
-              error={errors.message}
-              options={{
-                required: {
-                  value: true,
-                  message: 'Обязательное поле'
-                },
-                maxLength: {
-                  value: 1240,
-                  message: 'Превышена максимальная длинна'
-                }
-              }}
-            />
-            <div style={{ marginBottom: 16 }}>
-              <label>
-                <input
-                  type="checkbox"
-                  {...register('termsOfUse', {
-                    required: {
-                      value: true,
-                      message: 'Необходимо ваше соглашение'
-                    }
-                  })}
-                />
-                Я соглашаюсь с 
-                <span
-                  className="link"
-                  onClick={handleOpenModal}
-                >
-                  политикой конфенденциальности
-                </span>
-              </label>
-              {errors.termsOfUse && <ErrorHandler message={errors.termsOfUse.message} />}
-            </div>
-            <button className="primary-button">Отправить</button>
-          </form> */}
         </div>
         <div className="contacts__right">
           <a

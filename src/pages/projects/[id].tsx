@@ -3,6 +3,9 @@ import { useRouter } from 'next/router'
 import '@/styles/pages/project.scss'
 import { BackButton } from '@/components/BackButton'
 import { SectionContacts } from '@/components/SectionContacts'
+import { useSelector } from 'react-redux'
+import { RootState } from '@react-three/fiber'
+import styles from '@/styles/global.module.scss'
 
 export async function getServerSideProps({ params }: any) {
   const fs = require('fs')
@@ -10,8 +13,7 @@ export async function getServerSideProps({ params }: any) {
   const projects = await JSON.parse(projectsData)
 
   console.log('params', params.id)
-  const project =  projects.data.find(({ id }: any) => id === Number(params.id))
- 
+  const project = projects.data.find(({ id }: any) => id === Number(params.id))
 
   return {
     props: {
@@ -21,7 +23,7 @@ export async function getServerSideProps({ params }: any) {
   }
 }
 
-export default function Project({project,  projects }: any) {
+export default function Project({ project, projects }: any) {
   const router = useRouter()
   console.log(router)
   // const project =  projects.data.find(({ id }: any) => id === Number(router.query.id))
@@ -34,36 +36,37 @@ export default function Project({project,  projects }: any) {
   //   return findProject || null
   // }, [projects, router.query.id] )
 
-  console.log(projects)
-  console.log(project)
+  const screenSize = useSelector((state: any) => state.screen.screenSize) as any
 
-
+  console.log(screenSize)
   return (
     <main>
       <section className="project__wrapper">
         <BackButton />
-        {project !== null && <div className="project-main__wrapper">
-          <h1>{project.fullTitle}</h1>
-          <div className="project-main__image">
-            <Image
-              src={project.image}
-              height={400}
-              width={600}
-              alt={project?.fullTitle}
-            />
+        {project !== null && (
+          <div className="project-main__wrapper">
+            <h1 className={styles.h1}>{project.fullTitle}</h1>
+            <div className="project-main__image">
+              <Image
+                src={project.image}
+                height={400}
+                width={600}
+                alt={project?.fullTitle}
+              />
+            </div>
+            {project !== null &&
+              project !== undefined &&
+              project.description.map((text: string, index: number) => {
+                return (
+                  <>
+                    <p key={index}>{text}</p> <br />
+                  </>
+                )
+              })}
           </div>
-          {project !== null &&
-            project !== undefined &&
-            project.description.map((text: string, index: number) => {
-              return (
-                <>
-                  <p key={index}>{text}</p> <br />
-                </>
-              )
-            })}
-        </div>}
+        )}
       </section>
-      <SectionContacts/>
+      <SectionContacts />
     </main>
   )
 }

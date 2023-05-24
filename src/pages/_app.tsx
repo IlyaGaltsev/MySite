@@ -1,10 +1,14 @@
 import Header from '@/components/Header/Header'
 import Head from 'next/head'
+import { ToastContainer } from 'react-toastify'
 import '../styles/global.scss'
+import 'react-toastify/dist/ReactToastify.css'
+import { Provider } from 'react-redux'
+import store from '@/store'
 
 export default function MyApp({ Component, pageProps }: any) {
   return (
-    <>
+    <Provider store={store}>
       <Head>
         <style>
           {`
@@ -77,17 +81,29 @@ export default function MyApp({ Component, pageProps }: any) {
            button {
              transition: all 0.2s ease-in-out;
            }
-           
+          
          
           `}
         </style>
       </Head>
-      <div className='app__wrapper'>
+      <div className="app__wrapper">
         <Header />
-        <div className='app__sections'>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss={false}
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
+        <div className="app__sections">
           <Component {...pageProps} />
         </div>
       </div>
-    </>
+    </Provider>
   )
 }

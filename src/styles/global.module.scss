@@ -1,0 +1,39 @@
+@import './constants.scss';
+
+.h1 {
+  font-size: 48px;
+  line-height: 59px;
+  margin-top: 20vh;
+  margin-bottom: 14vh;
+}
+
+.h1Page {
+  font-size: 48px;
+  line-height: 59px;
+}
+
+@media (max-width: $medium-screen) {
+  .h1 {
+    font-size: 32px;
+    line-height: 28px;
+    margin-top: 90px;
+    margin-bottom: 70px;
+  }
+
+  .h1Page {
+    font-size: 32px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: $small-screen) {
+  .h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .h1Page {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
