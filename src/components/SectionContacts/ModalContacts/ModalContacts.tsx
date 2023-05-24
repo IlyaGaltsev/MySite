@@ -1,6 +1,7 @@
 import { TextFiled } from '@/components/TextFiled'
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
+import { toast } from 'react-toastify'
 import styles from './ModalContacts.module.scss'
 
 interface IModalContacts {
@@ -18,20 +19,43 @@ const ModalContacts = ({ isOpen, closeModal }: IModalContacts) => {
     closeModal()
   }
 
-  const handleSubmitForm = handleSubmit(data => {
+  const handleSubmitForm = handleSubmit(async(data) => {
     console.log(data)
-    axios
-      .post('https://mysite-backend.onrender.com/api/submit-form', data)
-      .then(data => {
-        console.log(data)
+    setTimeout(() => {
+      closeModal()
+      toast.success('Заявка отправлена!', {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+      }, 1000)
 
-        closeModal()
-        alert('success')
-      })
-      .catch(error => {
-        closeModal()
-        alert(`Возникла ошибка. Попробуйте позже ${error}`)
-      })
+    try {
+      // Выполните ваш долгий axios-запрос здесь
+      await axios.post('https://mysite-backend.onrender.com/api/submit-form', data);
+
+      // Уведомление об успешной отправке почты
+      
+    } catch (error) {
+      // Обработка ошибок при отправке почты
+      closeModal()
+      toast.error('Упс... Заявка не дошла, попробуйте позже', {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+    }
+   
   })
 
   if (!isOpen) return null

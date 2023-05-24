@@ -1,4 +1,5 @@
 import { AiOutlineGlobal, AiOutlineGithub } from 'react-icons/ai'
+import styles from './ProjectCard.module.scss'
 import { BsArrowRight } from 'react-icons/bs'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -26,12 +27,12 @@ const ProjectCard = ({
   technologies
 }: IProject) => {
   return (
-    <Link href={`/projects/${id}`} className='project-card'>
-      <Image width={420} height={286} src={image} alt={`prewiew ${title}`} />
-      <div className='project-card__contant'>
+    <Link href={`/projects/${id}`} className={styles.card}>
+      <Image priority width={420} height={286} src={image} alt={`prewiew ${title}`} />
+      <div className={styles.contant}>
         <div>
           <h3>{title}</h3>
-          <div className='project-card__actions'>
+          <div className={styles.actions}>
             {github && (
               <button>
                 <span>
@@ -50,7 +51,7 @@ const ProjectCard = ({
             )}
           </div>
         </div>
-        <BsArrowRight size={32} className='project-card__icon' />
+        <BsArrowRight size={32} className={styles.icon} />
       </div>
     </Link>
   )

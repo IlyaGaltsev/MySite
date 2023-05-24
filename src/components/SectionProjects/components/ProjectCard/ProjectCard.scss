@@ -1,75 +1,19 @@
 @import '@/styles/constants.scss';
 
 .project-card {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
+  
 
   // &:hover ~ .project-card {
 
   // }
 
-  img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 16px;
-  }
+ 
 
-  &__contant {
-    display: flex;
-    justify-content: space-between;
-  }
+  // &__
 
-  h3 {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 29px;
-
-    color: #c8c8c8;
-    margin-bottom: 10px;
-  }
-
-  &__actions {
-    display: flex;
-    gap: 16px;
-
-    button {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      background: transparent;
-      color: #c8c8c8;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 24px;
-      padding: 0;
-    }
-  }
-
-  &__icon {
-    color: white;
-    margin: 8px;
-  }
 }
 
-@media (max-width: $medium-screen) {
-  .project-card {
-    h3 {
-      font-size: 18px;
-      line-height: 22px;
-    }
 
-    &__actions {
-      button {
-        font-size: 16px;
-        line-height: 20px;
-      }
-    }
-  }
-}
 
 // .project-card:hover ~ .project-card:not(:hover) {
 //   /* стили для карточек, которые находятся после карточки, но не на которую наведен курсор */
@@ -101,18 +45,6 @@
 //   }
 // }
 
-.project-card {
-  &:hover {
-    opacity: 1;
-    transform: scale(1.05);
 
-    @media (max-width: $min-medium-screen) {
-      transform: scale(1.02);
-    }
-  }
-}
-.project-card:not(:hover) {
-  opacity: 0.7;
-}
 
 // .project-card
