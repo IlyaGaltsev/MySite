@@ -114,8 +114,6 @@
     }
     &__titles {
       h1 {
-        // font-size: 8vw;
-        // line-height: 8.2vw;
         max-width: 290px;
         font-size: 26px;
         line-height: 32px;
@@ -137,16 +135,20 @@
         top: -10%;
         right: -10%;
         max-width: 54vw;
+        object-fit: contain;
       }
 
       .illustration__bottom-arrow {
         bottom: -40%;
         left: -20%;
         max-width: 44vw;
+        object-fit: contain;
       }
 
       .illustration__avatar {
         max-width: 50%;
+        max-height: 200px;
+        object-fit: contain;
       }
     }
   }
