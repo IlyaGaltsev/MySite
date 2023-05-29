@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { SectionContacts } from '@/components/SectionContacts'
 import { BlogTitleCard } from '@/components/Blogs/BlogTitleCard'
 import '@/styles/pages/blog.scss'
+import Head from 'next/head'
 
 export async function getServerSideProps() {
   const fs = require('fs')
@@ -23,6 +24,9 @@ export default function Blog({ blogs }: any) {
 
   return (
     <main>
+      <Head>
+        <title>{blog?.title}</title>
+      </Head>
       <section className="blog__wrapper">
         {blog !== null && blog !== undefined ? <BlogTitleCard {...blog} /> : null}
 

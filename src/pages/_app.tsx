@@ -1,15 +1,29 @@
-import Header from '@/components/Header/Header'
-import Head from 'next/head'
 import { ToastContainer } from 'react-toastify'
-import '../styles/global.scss'
+import Header from '@/components/Header/Header'
 import 'react-toastify/dist/ReactToastify.css'
 import { Provider } from 'react-redux'
+import '../styles/global.scss'
+import Head from 'next/head'
 import store from '@/store'
 
 export default function MyApp({ Component, pageProps }: any) {
   return (
     <Provider store={store}>
       <Head>
+        <title>Главная - веб разрабочик Илья Гальцев</title>
+        {/* <link rel="shortcut icon" href="/public/favicon.svg" /> */}
+        <meta
+          name="viewport"
+          content="initial-scale=1.0, width=device-width"
+        />
+        <meta
+          name="description"
+          content="Привет, я React разработчик со знаниями React Native, CLI, Expo, Node.js Next.js и Firebase. Посмотрите мои проекты и свяжитесь со мной для сотрудничества."
+        />
+        <meta
+          name="keywords"
+          content="разработчик сайтов, веб разработчик, сделать сайт, купить сайт, разработчик веб и мультимедийных приложений, сделать мобильное приложение, MVP"
+        />
         <style>
           {`
            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');

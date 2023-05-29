@@ -9,8 +9,6 @@ const Particles = () => {
   const monitorScaleX = useTransform(scrollY, [0, 500], [0, 1]);
 
   useEffect(() => {
-    // Проверьте, если элементы находятся в видимости окна браузера
-    // и установите соответствующее состояние для анимации
     const handleScroll = () => {
       if (isElementInViewport('#laptop')) {
         setShowLaptop(true);
@@ -21,13 +19,11 @@ const Particles = () => {
     };
     window.addEventListener('scroll', handleScroll);
 
-    // Очистите событие прокрутки после того, как компонент будет удален
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  // Функция для проверки, если элемент находится в видимости окна браузера
   const isElementInViewport = (el) => {
     const rect = document.querySelector(el).getBoundingClientRect();
     return (

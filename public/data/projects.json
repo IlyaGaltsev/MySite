@@ -2,7 +2,7 @@
   "data": [
     {
       "id": 1,
-      "image": "/images/realtime-chat.svg",
+      "image": "/images/realtime-chat.png",
       "title": "Realtime Chat",
       "fullTitle": "Разработка клиентской части платформы Realtime Chat",
       "description": [
@@ -25,7 +25,7 @@
     },
     {
       "id": 2,
-      "image": "/images/realtime-chat_mobile.svg",
+      "image": "/images/realtime-chat_mobile.png",
       "title": "Realtime Chat Mobile",
       "fullTitle": "Разработка клиентской части платформы Realtime Chat",
       "description": [
@@ -51,7 +51,7 @@
     },
     {
       "id": 4,
-      "image": "/images/my-site.svg",
+      "image": "/images/my-site.png",
       "title": "Cайт-резюме",
       "fullTitle": "Разработка клиентской части платформы Realtime Chat",
       "description": [
@@ -77,7 +77,7 @@
     },
     {
       "id": 5,
-      "image": "/images/prioritet-lift.svg",
+      "image": "/images/prioritet-lift.png",
       "title": "ООО ПриоритетЛифт",
       "fullTitle": "Разработка клиентской части платформы Realtime Chat",
       "description": [
@@ -103,7 +103,7 @@
     },
     {
       "id": 6,
-      "image": "/images/book-military.svg",
+      "image": "/images/book-military.png",
       "title": "Учебно-методическое пособие",
       "fullTitle": "Разработка клиентской части платформы Realtime Chat",
       "description": [
@@ -129,7 +129,7 @@
     },
     {
       "id": 7,
-      "image": "/images/leader.svg",
+      "image": "/images/leader.png",
       "title": "Лидер",
       "fullTitle": "Разработка клиентской части платформы Realtime Chat",
       "description": [

@@ -19,43 +19,35 @@ const ModalContacts = ({ isOpen, closeModal }: IModalContacts) => {
     closeModal()
   }
 
-  const handleSubmitForm = handleSubmit(async(data) => {
+  const handleSubmitForm = handleSubmit(async data => {
     console.log(data)
     setTimeout(() => {
       closeModal()
       toast.success('Заявка отправлена!', {
-        position: "bottom-left",
+        position: 'bottom-left',
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "dark",
-        });
-      }, 1000)
+        theme: 'dark'
+      })
+    }, 1000)
 
-    try {
-      // Выполните ваш долгий axios-запрос здесь
-      await axios.post('https://mysite-backend.onrender.com/api/submit-form', data);
-
-      // Уведомление об успешной отправке почты
-      
-    } catch (error) {
-      // Обработка ошибок при отправке почты
+    await axios.post('https://mysite-backend.onrender.com/api/submit-form', data).catch(error => {
       closeModal()
       toast.error('Упс... Заявка не дошла, попробуйте позже', {
-        position: "bottom-left",
+        position: 'bottom-left',
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "dark",
-        });
-    }
-   
+        theme: 'dark'
+      })
+    })
   })
 
   if (!isOpen) return null
