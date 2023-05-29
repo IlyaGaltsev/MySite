@@ -11,7 +11,6 @@ export default function MyApp({ Component, pageProps }: any) {
     <Provider store={store}>
       <Head>
         <title>Главная - веб разрабочик Илья Гальцев</title>
-        {/* <link rel="shortcut icon" href="/public/favicon.svg" /> */}
         <meta
           name="viewport"
           content="initial-scale=1.0, width=device-width"
@@ -99,6 +98,14 @@ export default function MyApp({ Component, pageProps }: any) {
          
           `}
         </style>
+        <meta
+          name="yandex-verification"
+          content="d6901af968d935c9"
+        />
+        <meta
+          name="google-site-verification"
+          content="v695TDuMpuDaby6AFSW-xbzpXulrl9z0atMxV2D31jk"
+        />
       </Head>
       <div className="app__wrapper">
         <Header />
