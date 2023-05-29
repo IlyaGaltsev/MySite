@@ -100,7 +100,7 @@ export default function MyApp({ Component, pageProps }: any) {
         </style>
         <meta
           name="yandex-verification"
-          content="d6901af968d935c9"
+          content="10af51d3b8ac39f6"
         />
         <meta
           name="google-site-verification"
