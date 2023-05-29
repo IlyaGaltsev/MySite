@@ -6,6 +6,7 @@ import { SectionContacts } from '@/components/SectionContacts'
 import { useSelector } from 'react-redux'
 import { RootState } from '@react-three/fiber'
 import styles from '@/styles/global.module.scss'
+import Head from 'next/head'
 
 export async function getServerSideProps({ params }: any) {
   const fs = require('fs')
@@ -25,22 +26,17 @@ export async function getServerSideProps({ params }: any) {
 
 export default function Project({ project, projects }: any) {
   const router = useRouter()
-  console.log(router)
-  // const project =  projects.data.find(({ id }: any) => id === Number(router.query.id))
-
-  // const project = useMemo(() => {
-  //   if (projects) return null
-  //  const  findProject =  projects.data.find(({ id }: any) => id === Number(router.query.id))
-
-  //  console.log("useMemo",project)
-  //   return findProject || null
-  // }, [projects, router.query.id] )
-
   const screenSize = useSelector((state: any) => state.screen.screenSize) as any
 
-  console.log(screenSize)
   return (
     <main>
+      <Head>
+        <title>{project.title}</title>
+        <meta
+          name="keywords"
+          content="разработчик сайтов, веб разработчик, сделать сайт, купить сайт, разработчик веб и мультимедийных приложений, сделать мобильное приложение, MVP"
+        />
+      </Head>
       <section className="project__wrapper">
         <BackButton />
         {project !== null && (
