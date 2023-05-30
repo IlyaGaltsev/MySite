@@ -4,16 +4,15 @@ import { useEffect, useLayoutEffect, useState } from 'react'
 import React from 'react'
 import { HiOutlineMenuAlt3 } from 'react-icons/hi'
 import { IoCloseSharp } from 'react-icons/io5'
-
 import { contacts } from '../../data/contacts'
 import Image from 'next/image'
-import { BackButton } from '../BackButton'
 import { useRouter } from 'next/router'
 
 function Header() {
   const [isShow, setShow] = useState(false)
   const [isNotMainPage, setNotMainPage] = useState(false)
   const router = useRouter()
+  
   useEffect(() => {
     setNotMainPage(window.location.pathname !== '/')
   }, [router])
