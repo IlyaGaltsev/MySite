@@ -9,10 +9,10 @@ interface IProject {
   image: string
   id: any
   path?: any
-  title: any
+  title: string
   description: any
-  deploy: any
-  github: any
+  deploy: string
+  github: string
   technologies: any
 }
 
@@ -26,15 +26,28 @@ const ProjectCard = ({
   github,
   technologies
 }: IProject) => {
+  const redirectToMore = (path: string) => {
+    window.open(path, '_blank')
+  }
+
   return (
-    <Link href={`/projects/${id}`} className={styles.card}>
-      <Image priority width={420} height={286} src={image} alt={`prewiew ${title}`} />
+    <Link
+      href={`/projects/${id}`}
+      className={styles.card}
+    >
+      <Image
+        priority
+        width={420}
+        height={286}
+        src={image}
+        alt={`prewiew ${title}`}
+      />
       <div className={styles.contant}>
         <div>
           <h3>{title}</h3>
           <div className={styles.actions}>
             {github && (
-              <button>
+              <button onClick={() => redirectToMore(github)}>
                 <span>
                   Github  
                   <AiOutlineGithub size={20} />
@@ -42,7 +55,7 @@ const ProjectCard = ({
               </button>
             )}
             {deploy && (
-              <button>
+              <button onClick={() => redirectToMore(deploy)}>
                 <span>
                   Сайт  
                   <AiOutlineGlobal size={20} />
@@ -51,7 +64,10 @@ const ProjectCard = ({
             )}
           </div>
         </div>
-        <BsArrowRight size={32} className={styles.icon} />
+        <BsArrowRight
+          size={32}
+          className={styles.icon}
+        />
       </div>
     </Link>
   )

@@ -2,8 +2,10 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { SectionContacts } from '@/components/SectionContacts'
 import { BlogTitleCard } from '@/components/Blogs/BlogTitleCard'
-import '@/styles/pages/blog.scss'
+import '@/styles/pages/project.scss'
+import styles from '@/styles/global.module.scss'
 import Head from 'next/head'
+import { BackButton } from '@/components/BackButton'
 
 export async function getServerSideProps() {
   const fs = require('fs')
@@ -27,32 +29,30 @@ export default function Blog({ blogs }: any) {
       <Head>
         <title>{blog?.title}</title>
       </Head>
-      <section className="blog__wrapper">
-        {blog !== null && blog !== undefined ? <BlogTitleCard {...blog} /> : null}
-
-        <div className="blog__contant">
-          <p>{blog?.text ?? ''}</p>
-          <div className="blog__other-blogs">
-            <h3>Другие статьи</h3>
-            {otherBlog.map((blog: any) => {
-              return (
-                <div
-                  key={blog.id}
-                  className="other-blog__card"
-                >
-                  <Image
-                    src={blog.image ?? ''}
-                    width={60}
-                    height={60}
-                    alt="my-photo"
-                    priority
-                  />
-                  <p>{blog.title}</p>
-                </div>
-              )
-            })}
+      <section className="project__wrapper">
+        <BackButton />
+        {blog !== null && (
+          <div className="project-main__wrapper">
+            <h1 className={styles.h1}>{blog.title}</h1>
+            <div className="project-main__image">
+              <Image
+                src={blog.image}
+                height={400}
+                width={600}
+                alt={blog?.title}
+              />
+            </div>
+            {blog !== null &&
+              blog !== undefined &&
+              blog.description.map((text: string, index: number) => {
+                return (
+                  <>
+                    <p key={index}>{text}</p> <br />
+                  </>
+                )
+              })}
           </div>
-        </div>
+        )}
       </section>
       <SectionContacts />
     </main>

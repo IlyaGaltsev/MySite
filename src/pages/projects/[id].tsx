@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux'
 import { RootState } from '@react-three/fiber'
 import styles from '@/styles/global.module.scss'
 import Head from 'next/head'
+import { AiOutlineGlobal } from 'react-icons/ai'
 
 export async function getServerSideProps({ params }: any) {
   const fs = require('fs')
@@ -28,6 +29,10 @@ export default function Project({ project, projects }: any) {
   const router = useRouter()
   const screenSize = useSelector((state: any) => state.screen.screenSize) as any
 
+  const redirectToMore = (path: string) => {
+    window.open(path, '_blank')
+  }
+
   return (
     <main>
       <Head>
@@ -41,8 +46,27 @@ export default function Project({ project, projects }: any) {
         <BackButton />
         {project !== null && (
           <div className="project-main__wrapper">
-            <h1 className={styles.h1}>{project.fullTitle}</h1>
-            <div className="project-main__image">
+            
+            <h1 className={styles.h1} style={{marginBottom: 20}}>{project.fullTitle}</h1>
+            <div className={styles.actions}>
+            {project.github && (
+              <button onClick={() => redirectToMore(project.github)}>
+                <span>
+                  Github  
+                  <AiOutlineGlobal size={20} />
+                </span>
+              </button>
+            )}
+            {project.deploy && (
+              <button onClick={() => redirectToMore(project.deploy)}>
+                <span>
+                  Сайт  
+                  <AiOutlineGlobal size={20} />
+                </span>
+              </button>
+            )}
+          </div>
+            <div className="project-main__image" style={{marginTop: 70}}>
               <Image
                 src={project.image}
                 height={400}
