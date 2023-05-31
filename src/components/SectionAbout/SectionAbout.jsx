@@ -65,6 +65,12 @@ function SectionAbout() {
     drawFrame()
   }, [])
 
+  const redirectToCV = () => {
+    window.open(
+      'https://docs.google.com/document/d/14zpcbqmRUiqriTOoHmnMWif-aS1oAGILIuM0UxyEJFE/edit?usp=sharing',
+      '_blank'
+    )
+  }
   return (
     <section
       id="main"
@@ -90,7 +96,12 @@ function SectionAbout() {
           >
             <button className="primary-button">Связaться</button>
           </Link>
-          <button className="secoundary-button">Скачать резюме</button>
+          <button
+            className="secoundary-button"
+            onClick={redirectToCV}
+          >
+            Скачать резюме
+          </button>
         </div>
       </div>
       <div className="section-about__illustration">

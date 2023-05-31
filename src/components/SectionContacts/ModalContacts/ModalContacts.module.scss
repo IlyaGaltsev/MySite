@@ -1,3 +1,5 @@
+@import '@/styles/constants.scss';
+
 .overlay {
   display: flex;
   align-items: center;
@@ -11,6 +13,7 @@
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   color: #ffffff;
+  padding: 20px;
 }
 
 .body {
@@ -52,4 +55,59 @@
   display: flex;
   gap: 20px;
   width: 100%;
+}
+
+.textRules {
+  max-width: 400px;
+}
+.textRules,
+.textRules span {
+  font-weight: 500;
+
+  color: #6c6c6d;
+}
+
+.textRules span {
+  color: #868686;
+  cursor: pointer;
+}
+
+.button__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  button {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: $medium-screen) {
+  .body {
+    padding: 24px 20px;
+    background: #21262d;
+    border-radius: 15px;
+    width: 100%;
+  }
+}
+
+@media (max-width: $small-screen) {
+  .inputs {
+    gap: 10px;
+  }
+  .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .textRules {
+    margin-top: 20px;
+  }
+
+  .button__container {
+    flex-direction: column;
+    button {
+      margin-right: 0;
+    }
+  }
 }

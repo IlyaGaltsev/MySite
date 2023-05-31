@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useForm } from 'react-hook-form'
 import { toast } from 'react-toastify'
 import styles from './ModalContacts.module.scss'
+import { AiOutlineClose } from 'react-icons/ai'
 
 interface IModalContacts {
   isOpen: boolean
@@ -19,6 +20,12 @@ const ModalContacts = ({ isOpen, closeModal }: IModalContacts) => {
     closeModal()
   }
 
+  const redirectToRules = () => {
+    window.open(
+      'https://docs.google.com/document/d/1bMklD-XSLZsqp8FqxGkyL17iWf1DnKmOwtMnEZ9tMlw/edit?usp=sharing',
+      '_blank'
+    )
+  }
   const handleSubmitForm = handleSubmit(async data => {
     console.log(data)
     setTimeout(() => {
@@ -63,13 +70,19 @@ const ModalContacts = ({ isOpen, closeModal }: IModalContacts) => {
         onSubmit={handleSubmitForm}
       >
         <div className={styles.title}>
-          <h3>Заявка на проект</h3> <div onClick={handleCloseModal}>X</div>
+          <h3>Заявка на проект</h3>{' '}
+          <AiOutlineClose
+            size={24}
+            style={{ cursor: 'pointer' }}
+            onClick={handleCloseModal}
+          />
         </div>
         <div className={styles.inputs}>
           <TextFiled
             title="Текст сообщения"
             type="textarea"
             name="message"
+            placeholder="Введите текст сообщения"
             register={register}
             error={errors.message}
             options={{
@@ -88,6 +101,7 @@ const ModalContacts = ({ isOpen, closeModal }: IModalContacts) => {
               title="Ваше имя"
               type=""
               name="name"
+              placeholder="Введите ваше имя"
               register={register}
               error={errors.name}
               options={{
@@ -102,6 +116,7 @@ const ModalContacts = ({ isOpen, closeModal }: IModalContacts) => {
               type=""
               title="Адрес эл. почты"
               name="email"
+              placeholder="Введите ваш адрес эл. почты"
               register={register}
               error={errors.email}
               options={{
@@ -117,7 +132,13 @@ const ModalContacts = ({ isOpen, closeModal }: IModalContacts) => {
             />
           </div>
         </div>
-        <button className="primary-button">Отправить</button>
+        <div className={styles.button__container}>
+          <button className="primary-button">Отправить</button>
+          <p className={styles.textRules}>
+            Нажимая кнопку Отправить вы соглашаетесь с 
+            <span onClick={redirectToRules}>политикой конфиденциальности</span>
+          </p>
+        </div>
       </form>
     </div>
   )
