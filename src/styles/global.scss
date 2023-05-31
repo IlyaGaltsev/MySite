@@ -140,6 +140,10 @@ a {
   cursor: pointer;
 }
 
+.animate-link {
+  color: white;
+}
+
 .animate-link:hover::after {
   transform: scaleX(1);
 }
@@ -189,4 +193,3 @@ a {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   max-width: 620px;
 }
-

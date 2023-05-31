@@ -1,15 +1,15 @@
 import { ErrorHandler } from '../ErrorHandler'
 import styles from './TextFiled.module.scss'
 
-const TextFiled = ({ title, name, type, register, error, options }) => {
+const TextFiled = ({ title, name, type, register, error, options, placeholder }) => {
   return (
     <div className={`${styles.input} ${error ? styles.error : ''}`}>
       <p>{title}</p>
 
       {type === 'textarea' ? (
-        <textarea {...register(name, options)} />
+        <textarea placeholder={placeholder} {...register(name, options)} />
       ) : (
-        <input {...register(name, options)} />
+        <input placeholder={placeholder} {...register(name, options)} />
       )}
 
       {error && <ErrorHandler message={error.message} />}

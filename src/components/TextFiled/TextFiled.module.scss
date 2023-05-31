@@ -3,7 +3,22 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-
+  ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #21262D;
+  }
+  :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: red;
+  }
+  ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: red;
+  }
+  :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: red;
+  }
 }
 
 .input > p {
@@ -24,7 +39,7 @@
   height: 44px;
   width: 100%;
   color: #e6e6e6;
-  background: #5A646C;
+  background: #5a646c;
   border-radius: 10px;
 }
 
@@ -37,3 +52,4 @@
 .error > textarea {
   border: 1px solid red;
 }
+
