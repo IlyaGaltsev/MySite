@@ -111,3 +111,12 @@
     }
   }
 }
+
+
+@media (max-height: 698px) {
+  .overlay {
+    padding: 60px 20px;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+}

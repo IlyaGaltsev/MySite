@@ -63,20 +63,33 @@ function Header() {
   return (
     <header>
       <div className="header__wrapper">
-        <Image
-          src="/icons/logo.svg"
-          alt="GI"
-          width={38}
-          height={38}
-          priority
-        />
+        <Link href="/">
+          <Image
+            src="/icons/logo.svg"
+            alt="GI"
+            width={38}
+            height={38}
+            priority
+          />
+        </Link>
 
-        <div
-          className="header__menu-icon"
+     
+   
+
+        <button
+          class={`cmn-toggle-switch cmn-toggle-switch__htx ${isShow ? 'active' : ''}`}
           onClick={() => setShow(!isShow)}
         >
-          {isShow ? <IoCloseSharp size={32} /> : <HiOutlineMenuAlt3 size={32} />}
-        </div>
+          <span>toggle menu</span>
+        </button>
+
+        {/* <button class="cmn-toggle-switch cmn-toggle-switch__htla">
+  <span>toggle menu</span>
+</button>
+
+<button class="cmn-toggle-switch cmn-toggle-switch__htra">
+  <span>toggle menu</span>
+</button> */}
 
         <div className={`header__menu ${isShow ? 'header__menu_open' : ''}`}>
           <ul>
