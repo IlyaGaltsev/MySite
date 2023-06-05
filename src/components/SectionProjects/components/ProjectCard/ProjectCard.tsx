@@ -36,7 +36,6 @@ const ProjectCard = ({
       className={styles.card}
     >
       <Image
-        priority
         width={420}
         height={286}
         src={image}
